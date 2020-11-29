@@ -1,0 +1,72 @@
+// main
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: $black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+// smartgrid
+.container {
+  @include wrapper();
+}
+
+.container-fluid {
+  @include wrapper-full();
+}
+
+.row {
+  @include row-flex();
+}
+
+// text
+p, strong, i {
+  font-size: 1.125rem;
+}
+
+a {
+  font-size: 1.375rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: $black;
+}
+
+strong {
+  font-weight: $bold;
+}
+
+big {
+  font-size: 1.375rem;
+}
+
+small {
+  font-size: 1rem;
+}
+
+::placeholder {
+  font-size: 1.125rem;
+  color: $grey;
+}
+
+// title
+h1 {
+  font: $semi-bold 3.375rem $montserrat;
+}
+
+h2 {
+  font: $semi-bold 2.265rem $montserrat;
+}
+
+h3 {
+  font: $semi-bold 2rem $montserrat;
+}
+
+h4 {
+  font: $bold 1.5rem $montserrat;
+}

@@ -1,0 +1,55 @@
+header.header#header
+    .header__top
+        .container
+            .row
+                .header__time
+                    .header__time-icon
+                        include ../../../build/img/icons/calendar.svg
+                    big.header__time-text пн - вс: 9:00 - 21:00
+                .header__bucket
+                    ul.stick-list
+                        li
+                            a(href="warranty") Гарантия и возврат
+                        li
+                            a(href="bucket") Корзина
+                                .bucket-icon
+                                    include ../../../build/img/icons/bucket.svg
+                                    span 1
+    .hedaer__middle
+        .container
+            .row
+                .header__logo
+                    a.logo(href="/")
+                        img(src="/img/logo.png" alt="logotype")
+                .header__search
+                    form.search
+                        input(type="text" placeholder="Введите фразу для поиска..." name="AKBsearch" autocomplete="off" required)
+                        button(type="submit")
+                            include ../../../build/img/icons/search.svg
+                .header__contacts
+                    ul.stick-list
+                        li
+                            a(href="mailto:info@mg77.ru")
+                                include ../../../build/img/icons/envelope.svg
+                        li
+                            .list-information
+                                .list-information__icon
+                                    include ../../../build/img/icons/phone.svg
+                                .list-information__wrapper
+                                    a(href="tel:+74951221470") +7(495)122-14-70
+                                    a(href="tel:+79038097049") +7(903)809-70-49
+    nav.header__bottom
+        .container
+            ul.main-menu
+                li
+                    a(href="/") Главная
+                li
+                    a(href="catalog") Каталог товаров
+                li
+                    a(href="recycling") Утилизация
+                li
+                    a(href="opt") ОПТ
+                li
+                    a(href="payment") Доставка и оплата
+                li
+                    a(href="contacts") Контакты

@@ -1,0 +1,46 @@
+footer.footer#footer
+    .container
+        .row
+            .footer__logo
+                a.logo(href="/")
+                    img(src="/img/logo.png" alt="logotype")
+                .footer__copyright
+                    include ../../../build/img/icons/copyright.svg
+                    small 2020 Интернет-магазин. Все права защищены Любое копирование ссылок с данного ресурса карается законом РФ.
+            .footer__information
+                h4 Информация
+                ul.footer__menu
+                    li
+                        a(href="/") Главаная
+                    li
+                        a(href="catalog") Каталог товаров
+                    li
+                        a(href="recycling") Утилизация
+                    li
+                        a(href="contacts") Контакты
+            .footer__clients
+                h4 Для клиента
+                ul.footer__menu
+                    li
+                        a(href="payment") Доставка и оплата
+                    li
+                        a(href="warranty") Гарантия и возврат
+                    li
+                        a(href="policy") Политика конфиденциальности
+            .footer__contacts
+                .list-information
+                    .list-information__icon
+                        include ../../../build/img/icons/phone.svg
+                    .list-information__wrapper
+                        a(href="tel:+74951221470") +7(495)122-14-70
+                        a(href="tel:+79038097049") +7(903)809-70-49
+                .list-information
+                    .list-information__icon
+                        include ../../../build/img/icons/envelope.svg
+                    .list-information__wrapper
+                        a(href="mailto:info@mg77.ru") info@mg77.ru
+                .list-information
+                    .list-information__icon
+                        include ../../../build/img/icons/marker.svg
+                    .list-information__wrapper
+                        p г. Москва, ул. 7-я Парковая, д.24А, офис 3

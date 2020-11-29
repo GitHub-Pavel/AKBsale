@@ -1,0 +1,30 @@
+// include files
+@import "smart-grid";
+
+// zeroing
+@include reset();
+
+@import "variables";
+@import "settings";
+@import "components";
+
+// header
+.hedaer {
+  //header__top
+  &__top {
+    border-bottom: 1px solid $grey-light;
+    padding: 9px 0;
+  }
+
+  &__time {
+    &-icon {
+
+    }
+
+    &-text {
+
+    }
+  }
+  //header__top
+
+}// hedaer
