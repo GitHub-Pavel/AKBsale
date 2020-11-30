@@ -66,11 +66,11 @@ var settings = {
  
 var path = {
         build: {
-            html: 'build/',
-            js: 'build/js/',
-            css: 'build/css/',
+            html: 'docs/',
+            js: 'docs/js/',
+            css: 'docs/css/',
             csslib: 'project/scss',
-            img: 'build/img/'
+            img: 'docs/img/'
         },
         src: {
             html: 'project/pug/*.pug',
@@ -91,12 +91,12 @@ var path = {
             img: 'project/img/**/*.*',
             fonts: 'project/fonts/**/*.*'
         },
-        clean: './build'
+        clean: './docs'
     };
 
 var config = {
         server: {
-            baseDir: "./build"
+            baseDir: "./docs"
         },
         // tunnel: true,
         host: 'localhost'

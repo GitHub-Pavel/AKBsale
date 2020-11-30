@@ -31,10 +31,10 @@ form.main-filter(method="GET" actoin="catalog")
             .input-wrapper__slider
                 .input-wrapper__from
                     h5 От
-                    input(type="text" min="0" readonly class="from" name="capacity-from")
+                    input(type="text" data-min="0" readonly class="from" name="capacity-from")
                 .input-wrapper__to
                     h5 До
-                    input(type="text" max="500" readonly class="to" name="capacity-to")
+                    input(type="text" data-max="500" readonly class="to" name="capacity-to")
             .slider-range
     .input-wrapper
         h4  Габариты
@@ -57,10 +57,10 @@ form.main-filter(method="GET" actoin="catalog")
             .input-wrapper__slider
                 .input-wrapper__from
                     h5 От
-                    input(type="text" min="1" readonly class="from" name="capacity-from")
+                    input(type="text" data-min="1" readonly class="from" name="capacity-from")
                 .input-wrapper__to
                     h5 До
-                    input(type="text" max="500" readonly class="to" name="capacity-to")
+                    input(type="text" data-max="500" readonly class="to" name="capacity-to")
             .slider-range-min
     .submit-wrapper
         button.btn.btn-big.btn-red(type="submit") показать

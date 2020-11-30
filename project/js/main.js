@@ -48,8 +48,8 @@ $(function () {
 
     $('.slider-range').each(function() {
         let
-            min = +$( this ).parent().find('.from').attr('min'),
-            max = +$( this ).parent().find('.to').attr('max')
+            min = +$( this ).parent().find('.from').data('min'),
+            max = +$( this ).parent().find('.to').data('max')
 
         $(this).slider({
             range: true,
@@ -68,8 +68,8 @@ $(function () {
 
     $('.slider-range-min').each(function() {
         let
-            min = +$( this ).parent().find('.from').attr('min'),
-            max = +$( this ).parent().find('.to').attr('max')
+            min = +$( this ).parent().find('.from').data('min'),
+            max = +$( this ).parent().find('.to').data('max')
 
         $(this).slider({
             range: "min",
