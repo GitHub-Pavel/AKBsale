@@ -4,12 +4,20 @@ $(function () {
         $('body').toggleClass('active-menu')
     })
 
-    $(document).on('click', '.menu-bottom__item', function(e) {
+    $(document).on('click', 'a[data-menu]', function(e) {
         e.preventDefault()
         if (!($(this).hasClass('active'))) {
-            $('.menu-bottom__item').removeClass('active')
+            $('a[data-menu]').removeClass('active')
         }
         $(this).toggleClass('active')
+
+        $('a[data-menu]').each(function() {
+            if ($(this).hasClass('active')) {
+                $($(this).attr('href')).addClass('active')
+            } else {
+                $($(this).attr('href')).removeClass('active')
+            }
+        })
     })
 
     $('.popular-products__slider').slick({
