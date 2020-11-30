@@ -1,0 +1,28 @@
+.active-menu {
+  .header__bottom {
+    opacity: 1 !important;
+    width: 100%;
+    transition: opacity .3s ease-in-out .3s, width .3s ease-in-out;
+  }
+
+  #hamburger {
+    span {
+      transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
+
+      &:nth-child(1) {
+        top: 8px;
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        top: 8px;
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(3) {
+        top: 8px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

@@ -1,46 +1,77 @@
 footer.footer#footer
     .container
         .row
-            .footer__logo
+            .col.footer__logo
                 a.logo(href="/")
-                    img(src="/img/logo.png" alt="logotype")
+                    img(src="./img/logo-footer.png" alt="logotype")
                 .footer__copyright
-                    include ../../../build/img/icons/copyright.svg
+                    .icon
+                        include ../../../build/img/icons/copyright.svg
                     small 2020 Интернет-магазин. Все права защищены Любое копирование ссылок с данного ресурса карается законом РФ.
-            .footer__information
+            .col.footer__information
                 h4 Информация
                 ul.footer__menu
                     li
-                        a(href="/") Главаная
+                        a(href="/")
+                            p Главаная
                     li
-                        a(href="catalog") Каталог товаров
+                        a(href="catalog")
+                            p Каталог товаров
                     li
-                        a(href="recycling") Утилизация
+                        a(href="recycling")
+                            p Утилизация
                     li
-                        a(href="contacts") Контакты
-            .footer__clients
+                        a(href="contacts")
+                            p Контакты
+            .col.footer__clients
                 h4 Для клиента
                 ul.footer__menu
                     li
-                        a(href="payment") Доставка и оплата
+                        a(href="payment")
+                            p Доставка и оплата
                     li
-                        a(href="warranty") Гарантия и возврат
+                        a(href="warranty")
+                            p Гарантия и возврат
                     li
-                        a(href="policy") Политика конфиденциальности
-            .footer__contacts
-                .list-information
+                        a(href="policy")
+                            p Политика конфиденциальности
+            .col.footer__contacts
+                .footer__phone.list-information
                     .list-information__icon
-                        include ../../../build/img/icons/phone.svg
+                        .icon
+                            include ../../../build/img/icons/phone.svg
                     .list-information__wrapper
-                        a(href="tel:+74951221470") +7(495)122-14-70
-                        a(href="tel:+79038097049") +7(903)809-70-49
-                .list-information
+                        a(href="tel:+74951221470")
+                            p +7(495)122-14-70
+                        a(href="tel:+79038097049")
+                            p +7(903)809-70-49
+                .footer__mail.list-information
                     .list-information__icon
-                        include ../../../build/img/icons/envelope.svg
+                        .icon
+                            include ../../../build/img/icons/envelope.svg
                     .list-information__wrapper
-                        a(href="mailto:info@mg77.ru") info@mg77.ru
-                .list-information
+                        a(href="mailto:info@mg77.ru")
+                            p info@mg77.ru
+                .footer__address.list-information
                     .list-information__icon
-                        include ../../../build/img/icons/marker.svg
+                        .icon
+                            include ../../../build/img/icons/marker.svg
                     .list-information__wrapper
                         p г. Москва, ул. 7-я Парковая, д.24А, офис 3
+
+#one-click.modal
+    h2.text-center Купить в 1 клик
+    form
+        .input-wrapper
+            p  Имя
+            .input-wrapper__inputs
+                input(type="text" name="name" placeholder="Введите ваше имя" required)
+        .input-wrapper
+            p  Телефон
+            .input-wrapper__inputs
+                input(type="tel" name="tel" placeholder="Введите ваш телефон" required)
+        .descripton
+            small Нажимаю на кнопку, вы даете согласие на
+                a(href="policy") обработку персональных данных
+        .btn-wrapper
+            button.btn.btn-red.btn-primary(type="submit") заказать звонок

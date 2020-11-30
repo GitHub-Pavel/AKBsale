@@ -1,0 +1,47 @@
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-sm-center {
+  @include sm(justify-content, center);
+}
+
+.align-center {
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-md-none {
+  @include md(display, none !important);
+}
+
+.d-sm-none {
+  @include sm(display, none !important);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-md-flex {
+  @include md(display, flex);
+}
+
+.d-sm-flex {
+  @include sm(display, flex);
+}
+
+.d-xx-none {
+  @include xx(display, none !important);
+}

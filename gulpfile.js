@@ -33,6 +33,9 @@ var settings = {
         fields: '30px' /* side fields */
     },
     breakPoints: {
+        elg: {
+            width: '1315px', /* -> @media (max-width: 1200px) */
+        },
         lg: {
             width: '1100px', /* -> @media (max-width: 1100px) */
         },
@@ -45,6 +48,9 @@ var settings = {
         },
         xs: {
             width: '560px'
+        },
+        xx: {
+            width: '440px'
         }
         /* 
         We can create any quantity of break points.

@@ -1,0 +1,139 @@
+input {
+  border-radius: 0px;
+  width: 100%;
+  background: transparent;
+}
+
+input[type="text"], input[type="tel"], textarea {
+  border: 1px solid $grey-light;
+  color: $black;
+  font-size: 1.125rem;
+  font-weight: $regular;
+  font-family: $open-sans;
+  padding: 15px 20px;
+  outline: none;
+
+  ::placeholder {
+    color: $grey-light;
+  }
+}
+
+button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.btn {
+  font-weight: $bold;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  transition: box-shadow .3s ease-in-out, color .3s ease-in-out, background .3s ease-in-out, transform .3s ease-in-out;
+
+  .icon {
+    width: 30px;
+    margin-left: 6px;
+  }
+
+  &:hover {
+    box-shadow: 0px 6px 7px rgba(0, 0, 0, 0.35);
+    transform: translateY(-6px);
+  }
+}
+
+// size
+.btn-primary {
+  padding: 15px 20px;
+}
+
+.btn-big {
+  padding: 20px 40px;
+}
+
+// color
+.btn-black {
+  background: $black;
+}
+
+.btn-red {
+  background: $red;
+}
+
+// inputs
+.input-wrapper {
+  h4 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  h5 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__inputs {
+    &_many {
+      margin-right: -10px;
+      margin-left: -10px;
+      display: flex;
+      flex-wrap: wrap;
+
+      .input-wrapper {
+        margin: 0 10px;
+        width: calc(100% / 12 * 4 - 20px);
+
+        @include xx(width, calc(100% - 20px));
+      }
+    }
+  }
+}
+
+.select-wrapper {
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    height: 10px;
+    width: 10px;
+    background: $white;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  select {
+    padding: 20px 17.5px;
+    font-family: $open-sans;
+    font-size: 1.125rem;
+    border-radius: 0;
+    border: 1px solid $grey;
+    color: $black;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+
+    option {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+    }
+  }
+
+  .icon {
+    width: 14px;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    pointer-events: none;
+  }
+}

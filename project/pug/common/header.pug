@@ -1,47 +1,77 @@
 header.header#header
     .header__top
         .container
-            .row
-                .header__time
-                    .header__time-icon
+            .row.justify-between
+                .col.header__time
+                    .header__time-icon.icon
                         include ../../../build/img/icons/calendar.svg
-                    big.header__time-text пн - вс: 9:00 - 21:00
-                .header__bucket
+                    p.big пн - вс: 9:00 - 21:00
+                .col.header__bucket.d-md-none
                     ul.stick-list
                         li
-                            a(href="warranty") Гарантия и возврат
+                            a(href="warranty")
+                                span Гарантия и возврат
                         li
-                            a(href="bucket") Корзина
-                                .bucket-icon
+                            a.bucket(href="bucket")
+                                span Корзина
+                                .bucket-icon.icon
                                     include ../../../build/img/icons/bucket.svg
-                                    span 1
-    .hedaer__middle
+                                    p 1
+    .header__middle
         .container
-            .row
-                .header__logo
+            .row.align-center
+                .col.header__logo
                     a.logo(href="/")
-                        img(src="/img/logo.png" alt="logotype")
-                .header__search
+                        img(src="./img/logo.png" alt="logotype")
+                    a#hamburger.d-none.d-md-flex(href="#menu")
+                        span
+                        span
+                        span
+                .col.header__search
                     form.search
                         input(type="text" placeholder="Введите фразу для поиска..." name="AKBsearch" autocomplete="off" required)
                         button(type="submit")
-                            include ../../../build/img/icons/search.svg
-                .header__contacts
+                            .icon
+                                include ../../../build/img/icons/search.svg
+                        .search__window
+                            a(href="product") Аккумулятор Spark 55 Ач 450A обр. пол.
+                            a(href="product") Аккумулятор Spark 55 Ач 450A обр. пол.
+                            a(href="product") Аккумулятор Spark 55 Ач 450A обр. пол.
+                .col.header__contacts.d-sm-none
                     ul.stick-list
                         li
                             a(href="mailto:info@mg77.ru")
-                                include ../../../build/img/icons/envelope.svg
+                                .icon
+                                    include ../../../build/img/icons/envelope.svg
                         li
                             .list-information
                                 .list-information__icon
-                                    include ../../../build/img/icons/phone.svg
+                                    .icon
+                                        include ../../../build/img/icons/phone.svg
                                 .list-information__wrapper
-                                    a(href="tel:+74951221470") +7(495)122-14-70
-                                    a(href="tel:+79038097049") +7(903)809-70-49
+                                    a(href="tel:+74951221470")
+                                        strong +7(495)122-14-70
+                                    a(href="tel:+79038097049")
+                                        strong +7(903)809-70-49
+                .col.header__bucket.d-none.d-md-flex.d-sm-none
+                    ul.stick-list
+                        li
+                            a(href="warranty")
+                                span Гарантия и возврат
+                        li
+                            a.bucket(href="bucket")
+                                span.d-xx-none Корзина
+                                .bucket-icon.icon
+                                    include ../../../build/img/icons/bucket.svg
+                                    p 1
     nav.header__bottom
         .container
+            a.bucket(href="bucket")
+                .bucket-icon.icon
+                    include ../../../build/img/icons/bucket.svg
+                    p 1
             ul.main-menu
-                li
+                li.current-menu-item
                     a(href="/") Главная
                 li
                     a(href="catalog") Каталог товаров
@@ -53,3 +83,4 @@ header.header#header
                     a(href="payment") Доставка и оплата
                 li
                     a(href="contacts") Контакты
+            a(href="warranty") Гарантия и возврат

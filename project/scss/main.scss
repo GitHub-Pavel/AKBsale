@@ -6,10 +6,18 @@
 
 @import "variables";
 @import "settings";
+@import "standarts";
+@import "buttons";
 @import "components";
+@import "body";
 
 // header
-.hedaer {
+.header {
+  margin-bottom: 60px;
+  position: relative;
+
+  @include md(margin-bottom, 30px);
+
   //header__top
   &__top {
     border-bottom: 1px solid $grey-light;
@@ -17,14 +25,448 @@
   }
 
   &__time {
+    display: flex;
+    align-items: center;
+
+    @include size-md(12);
+    @include md(display, flex);
+    @include md(justify-content, center);
+
     &-icon {
+      margin-right: 20px;
+      width: 40px;
 
-    }
-
-    &-text {
-
+      @include md(width, 30px);
     }
   }
-  //header__top
 
-}// hedaer
+  &__bucket {
+    @include size-md(7);
+    @include size-sm(12);
+    @include md(order, 3);
+  }
+
+  //header__middle
+  &__middle {
+    padding: 12px 0 7px;
+
+    .list-information {
+      &__wrapper {
+        margin: -3px 0;
+        a {
+          margin: 3px 0;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  &__logo {
+    @include size(3.5);
+    @include size-elg(6);
+    @include size-md(12);
+
+    @include elg(order, 0);
+    @include md(display, flex);
+    @include md(justify-content, space-between);
+    @include md(align-items, center);
+
+    .logo {
+      margin-left: -30px;
+
+      @include lg(margin-left, -25px);
+      //@include md(margin-left, 0px);
+    }
+  }
+
+  &__search {
+    @include size(5);
+    @include size-elg(12);
+
+    @include elg(order, 2);
+    @include elg(margin-bottom, 20px);
+    @include elg(margin-top, 5px);
+  }
+
+  &__contacts {
+    @include size(3.5);
+    @include size-elg(6);
+    @include size-md(5);
+    @include size-sm(12);
+
+    @include elg(order, 1);
+    @include md(order, 4);
+
+    display: flex;
+    justify-content: flex-end;
+
+    .icon {
+      width: 40px;
+      @include md(width, 30px);
+    }
+  }
+
+  // header__bottom
+  &__bottom {
+    background: $black;
+    padding: 16px 0;
+
+    span, a {
+      color: $white;
+    }
+
+    a {
+      font-weight: $bold;
+      text-align: center;
+      margin: 10px 0;
+      display: none;
+    }
+
+    .main-menu {
+      a {
+        display: block;
+      }
+    }
+
+    li a {
+      margin: 0;
+    }
+
+    p {
+      color: $white;
+      background: $red;
+    }
+
+    path {
+      fill: $white;
+    }
+
+    @media screen and (max-width: 960px) {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      opacity: 0;
+      width: 0;
+      overflow: hidden;
+      transition: opacity .3s ease-in-out, width .3s ease-in-out .3s;
+      z-index: 99;
+
+      a {
+        display: block;
+      }
+
+      .bucket {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+}// header
+
+
+// faq-phone
+.faq-phone {
+  background: rgba(245, 245, 245, 0.74);
+  padding: 60px 0;
+
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .atention {
+    margin-top: 20px;
+    color: $grey;
+    @include sm(text-align, center);
+  }
+
+  &__form {
+    margin: 0 -10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include sm(padding-top, 20px);
+
+    input, button {
+      margin: 20px 10px 0;
+    }
+
+    input {
+      flex: 1 1 300px;
+
+      @include sm(flex, auto);
+    }
+
+    button {
+      @include sm(margin-top, 40px);
+    }
+  }
+}// faq-phone
+
+
+// benefit
+.benefit {
+  h2 {
+    color: $red;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 3px;
+      max-width: 830px;
+      margin: 20px auto 0;
+      background: $red;
+      box-shadow: 0px 2px 4px rgba(211, 36, 32, 0.4);
+    }
+  }
+
+  &__item {
+    @include size(4);
+    @include size-lg(6);
+    @include size-sm(10);
+    @include size-xs(12);
+
+    margin-top: 60px;
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+
+    .icon {
+      width: 114px;
+    }
+  }
+
+  &__text {
+    margin-left: 60px;
+    margin-top: 60px;
+  }
+
+  &__about {
+    margin-top: 60px;
+
+    p {
+      margin-top: 30px;
+    }
+  }
+}// benefit
+
+// footer
+.footer {
+  background: $black;
+  color: $white;
+  padding: 30px 0 60px;
+
+  a {
+    color: $white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  path {
+    fill: $white;
+  }
+
+  h4 {
+    margin-bottom: 20px;
+  }
+
+  ul {
+
+    li {
+      margin: 6px 0;
+    }
+
+    a {
+      line-height: 115%;
+    }
+  }
+
+  &__logo {
+    @include size(4.8);
+    @include size-elg(12);
+
+    @include sm(order, 3);
+
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+
+    @include elg(align-items, center);
+    @include sm(margin-bottom, 15px);
+  }
+
+  &__copyright {
+    display: flex;
+    margin-top: 40px;
+
+    .icon {
+      width: 20px;
+      margin-right: 12px;
+      align-items: flex-start;
+    }
+
+    small {
+      max-width: 380px;
+
+      @include elg(max-width, 100%);
+      @include elg(flex, 1 1);
+    }
+  }
+
+  &__information {
+    @include size(2.5);
+    @include size-elg(4);
+    @include size-sm(12);
+
+    @include sm(order, 0);
+    @include sm(text-align, center);
+
+    margin-top: 30px;
+  }
+
+  &__clients {
+    @include size(2.5);
+    @include size-elg(4);
+    @include size-sm(12);
+
+    @include sm(order, 1);
+    @include sm(text-align, center);
+
+    margin-top: 30px;
+  }
+
+  &__contacts {
+    @include size(2.2);
+    @include size-elg(4);
+    @include size-sm(12);
+
+    @include sm(order, 2);
+
+    margin-bottom: -30px;
+
+    .list-information {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+
+      @include sm(justify-content, center);
+
+      @include xs(align-items, center);
+      @include xs(flex-direction, column);
+
+      &__icon {
+        display: flex;
+        align-items: center;
+
+        @include xs(margin-right, 0);
+        @include xs(margin-bottom, 15px);
+        @include xs(margin-top, 15px);
+
+        .icon {
+          display: flex;
+          align-items: center;
+          width: 40px;
+
+          @include md(width, 30px);
+        }
+      }
+    }
+  }
+
+  &__phone {
+    .list-information {
+      &__wrapper {
+        margin: -4px;
+
+        a {
+          padding: 4px 0;
+        }
+      }
+    }
+  }
+
+  &__address {
+    @include xs(text-align, center);
+  }
+}// footer
+
+// category-wrapper
+.category-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include row-flex();
+
+  .category {
+    @include col();
+    @include size(6);
+    @include size-md(12);
+  }
+}// category-wrapper
+
+// popular-poducts
+.popular-poducts {
+  .container {
+    max-width: 1360px;
+  }
+
+  .slick-arrow {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .icon {
+      width: 100%;
+    }
+  }
+
+  .slick-next {
+    right: -50px;
+  }
+
+  .slick-prev {
+    left: -70px;
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    bottom: -40px;
+  }
+
+  .slick-dots li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.slick-active {
+      button {
+        opacity: 1;
+      }
+    }
+  }
+
+  .slick-dots li button {
+    border-radius: 50%;
+    background: $grey;
+    width: 3px;
+    height: 3px;
+    opacity: .5;
+
+    &:before {
+      display: none;
+    }
+  }
+}// popular-poducts
