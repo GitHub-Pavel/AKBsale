@@ -305,19 +305,17 @@
               </div>
               <div class="input-wrapper">
                 <h4>Ёмкость</h4>
-                <div class="input-wrapper__inputs">
-                  <div class="input-wrapper__slider">
-                    <div class="input-wrapper__from">
-                      <h5>От</h5>
-                      <input class="from" type="text" data-min="0" readonly name="capacity-from">
-                    </div>
-                    <div class="input-wrapper__to">
-                      <h5>До</h5>
-                      <input class="to" type="text" data-max="500" readonly name="capacity-to">
-                    </div>
+                <div class="input-wrapper__slider">
+                  <div class="input-wrapper__input input-wrapper__input_from">
+                    <h5>От</h5>
+                    <input class="from" type="number" min="1" max="500" readonly name="capacity-from">
                   </div>
-                  <div class="slider-range"></div>
+                  <div class="input-wrapper__input input-wrapper__input_to">
+                    <h5>До</h5>
+                    <input class="to" type="number" min="1" max="500" readonly name="capacity-to">
+                  </div>
                 </div>
+                <div class="slider-range"></div>
               </div>
               <div class="input-wrapper">
                 <h4> Габариты</h4>
@@ -344,19 +342,17 @@
               </div>
               <div class="input-wrapper">
                 <h4>Цена</h4>
-                <div class="input-wrapper__inputs">
-                  <div class="input-wrapper__slider">
-                    <div class="input-wrapper__from">
-                      <h5>От</h5>
-                      <input class="from" type="text" data-min="1" readonly name="capacity-from">
-                    </div>
-                    <div class="input-wrapper__to">
-                      <h5>До</h5>
-                      <input class="to" type="text" data-max="500" readonly name="capacity-to">
-                    </div>
+                <div class="input-wrapper__slider">
+                  <div class="input-wrapper__input input-wrapper__input_from">
+                    <h5>От</h5>
+                    <input class="from" type="number" min="1" max="500" readonly name="capacity-from">
                   </div>
-                  <div class="slider-range-min"></div>
+                  <div class="input-wrapper__input input-wrapper__input_to">
+                    <h5>До</h5>
+                    <input class="to" type="number" min="1" max="500" name="capacity-to">
+                  </div>
                 </div>
+                <div class="slider-range-min"></div>
               </div>
               <div class="submit-wrapper">
                 <button class="btn btn-big btn-red" type="submit">показать</button>
@@ -787,6 +783,115 @@
           </div>
         </button>
         <div class="search__window"><a href="product">Аккумулятор Spark 55 Ач 450A обр. пол.</a><a href="product">Аккумулятор Spark 55 Ач 450A обр. пол.</a><a href="product">Аккумулятор Spark 55 Ач 450A обр. пол.</a></div>
+      </form>
+    </div>
+    <div id="main-filter">
+      <form class="main-filter" method="GET" actoin="catalog">
+        <div class="main-filter__title">
+          <h4>ПОДБОР АККУМУЛЯТОРА</h4>
+        </div>
+        <div class="input-wrapper">
+          <h4> Производитель</h4>
+          <div class="input-wrapper__inputs">
+            <label class="select-wrapper">
+              <select name="who">
+                <option>Выберите из списка</option>
+              </select>
+              <div class="icon"><svg viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.75 0.5L7 6.75L13.25 0.5H0.75Z" fill="black"/>
+</svg>
+
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="input-wrapper">
+          <h4> Полярность</h4>
+          <div class="input-wrapper__inputs">
+            <label class="select-wrapper">
+              <select name="com">
+                <option>Выберите из списка</option>
+              </select>
+              <div class="icon"><svg viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.75 0.5L7 6.75L13.25 0.5H0.75Z" fill="black"/>
+</svg>
+
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="input-wrapper">
+          <h4> Тип аккумулятора</h4>
+          <div class="input-wrapper__inputs">
+            <label class="select-wrapper">
+              <select name="bat">
+                <option>Выберите из списка</option>
+              </select>
+              <div class="icon"><svg viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.75 0.5L7 6.75L13.25 0.5H0.75Z" fill="black"/>
+</svg>
+
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="input-wrapper">
+          <h4>Ёмкость</h4>
+          <div class="input-wrapper__slider">
+            <div class="input-wrapper__input input-wrapper__input_from">
+              <h5>От</h5>
+              <input class="from" type="number" min="1" max="500" readonly name="capacity-from">
+            </div>
+            <div class="input-wrapper__input input-wrapper__input_to">
+              <h5>До</h5>
+              <input class="to" type="number" min="1" max="500" readonly name="capacity-to">
+            </div>
+          </div>
+          <div class="slider-range"></div>
+        </div>
+        <div class="input-wrapper">
+          <h4> Габариты</h4>
+          <div class="input-wrapper__inputs input-wrapper__inputs_many">
+            <div class="input-wrapper">
+              <h5>Высота</h5>
+              <div class="input-wrapper__inputs">
+                <input type="text" name="height">
+              </div>
+            </div>
+            <div class="input-wrapper">
+              <h5>Ширина</h5>
+              <div class="input-wrapper__inputs">
+                <input type="text" name="weight">
+              </div>
+            </div>
+            <div class="input-wrapper">
+              <h5>Длина</h5>
+              <div class="input-wrapper__inputs">
+                <input type="text" name="long">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="input-wrapper">
+          <h4>Цена</h4>
+          <div class="input-wrapper__slider">
+            <div class="input-wrapper__input input-wrapper__input_from">
+              <h5>От</h5>
+              <input class="from" type="number" min="1" max="500" readonly name="capacity-from">
+            </div>
+            <div class="input-wrapper__input input-wrapper__input_to">
+              <h5>До</h5>
+              <input class="to" type="number" min="1" max="500" name="capacity-to">
+            </div>
+          </div>
+          <div class="slider-range-min"></div>
+        </div>
+        <div class="submit-wrapper">
+          <button class="btn btn-big btn-red" type="submit">показать</button>
+          <div class="submit-wrapper__found">
+            <h5>Найдено 2092 вариантов</h5>
+          </div>
+        </div>
       </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

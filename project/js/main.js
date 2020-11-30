@@ -53,8 +53,8 @@ $(function () {
 
     $('.slider-range').each(function() {
         let
-            min = +$( this ).parent().find('.from').data('min'),
-            max = +$( this ).parent().find('.to').data('max')
+            min = +$( this ).parent().find('.from').attr('min'),
+            max = +$( this ).parent().find('.to').attr('max')
 
         $(this).slider({
             range: true,
@@ -71,10 +71,34 @@ $(function () {
         $(this).parent().find('.to').val($( this ).slider( "values", 1 ))
     })
 
+    $(document).on('input', 'input[type="number"]', function(e) {
+        if (+$(this).val() > +$(this).attr('max')) {
+            $(this).val(+$(this).attr('max'))
+        }
+
+        if (+$(this).val() < +$(this).attr('min')) {
+            if ($(this).val() != '') {
+                $(this).val(+$(this).attr('min'))
+            }
+        }
+
+        $(this).parent().parent().parent().find('.slider-range-min').slider( "value", $(this).val() )
+
+        if ($(this).hasClass('from')) {
+            $(this).parent().parent().parent().find('.slider-range')
+                .slider("values", [$(this).val(), $(this).parent().parent().find('to').val()])
+        }
+
+        if ($(this).hasClass('to')) {
+            $(this).parent().parent().parent().find('.slider-range')
+                .slider("values", [$(this).parent().parent().find('from').val(), $(this).val()])
+        }
+    })
+
     $('.slider-range-min').each(function() {
         let
-            min = +$( this ).parent().find('.from').data('min'),
-            max = +$( this ).parent().find('.to').data('max')
+            min = +$( this ).parent().find('.from').attr('min'),
+            max = +$( this ).parent().find('.to').attr('max')
 
         $(this).slider({
             range: "min",

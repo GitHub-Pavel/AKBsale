@@ -13,6 +13,8 @@ input[type="text"], input[type="tel"], input[type="number"], textarea {
   padding: 15px 20px;
   outline: none;
 
+  @include sm(padding, 15px);
+
   ::placeholder {
     color: $grey-light;
   }
@@ -54,6 +56,8 @@ button {
 
 .btn-big {
   padding: 20px 40px;
+
+  @include sm(padding, 10px 40px);
 }
 
 // color
@@ -67,9 +71,20 @@ button {
 
 // inputs
 .input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .slider-range, .slider-range-min {
+    width: 100%;
+    margin: 10px 0;
+  }
+
   h4 {
     margin-top: 28px;
     margin-bottom: 19px;
+    flex: 1 1;
   }
 
   h5 {
@@ -78,18 +93,19 @@ button {
   }
 
   &__inputs {
+    width: 100%;
+
     &_many {
       margin-right: -10px;
       margin-left: -10px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      width: calc(100% + 20px);
 
       .input-wrapper {
         margin: 0 10px;
         flex: 1 1 107px;
-
-        @include xx(width, calc(100% - 20px));
       }
     }
   }
@@ -98,27 +114,29 @@ button {
     display: flex;
     margin-left: -27px;
     margin-right: -27px;
-
-    @include xx(flex-direction, column);
+    @include sm(margin, 0 -10px 0 0);
+    @include sm(flex, 1 1 190px);
   }
 
-  &__from, &__to {
-    display: flex;
-    align-items: center;
-    margin-left: 27px;
-    margin-right: 27px;
-    margin-top: 10px;
+  &__input {
+    &_from, &_to {
+      display: flex;
+      align-items: center;
+      margin-left: 27px;
+      margin-right: 27px;
+      margin-top: 10px;
+      width: calc(50% - 44px);
 
-    h5 {
-      margin: 0;
-      padding: 0;
-      margin-right: 20px;
-    }
-  }
+      @include sm(margin, 15px 10px 8px);
+      @include sm(width, calc(50% - 20px));
 
-  &__from {
-    h5 {
-      @include xx(margin-right, 22px);
+      h5 {
+        margin: 0;
+        padding: 0;
+        margin-right: 20px;
+
+        @include sm(margin-right, 5px);
+      }
     }
   }
 }
@@ -150,6 +168,8 @@ button {
     cursor: pointer;
     background: $white;
 
+    @include sm(padding, 8px 20px);
+
     option {
       font-family: inherit;
       font-size: inherit;
@@ -159,6 +179,10 @@ button {
 
   .icon {
     width: 14px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    background: $white;
     position: absolute;
     right: 30px;
     top: 50%;

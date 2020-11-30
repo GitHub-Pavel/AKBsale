@@ -27,15 +27,14 @@ form.main-filter(method="GET" actoin="catalog")
                     include ../../img/icons/align-down.svg
     .input-wrapper
         h4 Ёмкость
-        .input-wrapper__inputs
-            .input-wrapper__slider
-                .input-wrapper__from
-                    h5 От
-                    input(type="text" data-min="0" readonly class="from" name="capacity-from")
-                .input-wrapper__to
-                    h5 До
-                    input(type="text" data-max="500" readonly class="to" name="capacity-to")
-            .slider-range
+        .input-wrapper__slider
+            .input-wrapper__input.input-wrapper__input_from
+                h5 От
+                input(type="number" min="1" max="500" readonly class="from" name="capacity-from")
+            .input-wrapper__input.input-wrapper__input_to
+                h5 До
+                input(type="number" min="1" max="500" readonly class="to" name="capacity-to")
+        .slider-range
     .input-wrapper
         h4  Габариты
         .input-wrapper__inputs.input-wrapper__inputs_many
@@ -53,15 +52,14 @@ form.main-filter(method="GET" actoin="catalog")
                     input(type="text" name="long")
     .input-wrapper
         h4 Цена
-        .input-wrapper__inputs
-            .input-wrapper__slider
-                .input-wrapper__from
-                    h5 От
-                    input(type="text" data-min="1" readonly class="from" name="capacity-from")
-                .input-wrapper__to
-                    h5 До
-                    input(type="text" data-max="500" readonly class="to" name="capacity-to")
-            .slider-range-min
+        .input-wrapper__slider
+            .input-wrapper__input.input-wrapper__input_from
+                h5 От
+                input(type="number" min="1" max="500" readonly class="from" name="capacity-from")
+            .input-wrapper__input.input-wrapper__input_to
+                h5 До
+                input(type="number" min="1" max="500" class="to" name="capacity-to")
+        .slider-range-min
     .submit-wrapper
         button.btn.btn-big.btn-red(type="submit") показать
         .submit-wrapper__found
