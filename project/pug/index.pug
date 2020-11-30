@@ -5,83 +5,11 @@ block content
         .container
             .row
                 .sidebar
-                    form.main-filter(method="GET" actoin="catalog")
-                        .main-filter__title
-                            h4 ПОДБОР АККУМУЛЯТОРА
-                        .input-wrapper
-                            h4  Производитель
-                            .input-wrapper__inputs
-                                label.select-wrapper
-                                    select(name="who")
-                                        option Выберите из списка
-                                    .icon
-                                        include ../../build/img/icons/align-down.svg
-                        .input-wrapper
-                            h4  Полярность
-                            .input-wrapper__inputs
-                                label.select-wrapper
-                                    select(name="com")
-                                        option Выберите из списка
-                                    .icon
-                                        include ../../build/img/icons/align-down.svg
-                        .input-wrapper
-                            h4  Тип аккумулятора
-                            .input-wrapper__inputs
-                                label.select-wrapper
-                                    select(name="bat")
-                                        option Выберите из списка
-                                    .icon
-                                        include ../../build/img/icons/align-down.svg
-                        .input-wrapper
-                            h4  Габариты
-                            .input-wrapper__inputs.input-wrapper__inputs_many
-                                .input-wrapper
-                                    h5 Высота
-                                    .input-wrapper__inputs
-                                        input(type="text" name="height")
-                                .input-wrapper
-                                    h5 Ширина
-                                    .input-wrapper__inputs
-                                        input(type="text" name="weight")
-                                .input-wrapper
-                                    h5 Длина
-                                    .input-wrapper__inputs
-                                        input(type="text" name="long")
-                        .submit-wrapper
-                            button.btn.btn-big.btn-red(type="submit") показать
-                            .submit-wrapper__found
-                                h5 Найдено 2092 вариантов
+                    include includes/main-filter
                 .content
                     h1 Интернет-магазин аккумуляторов AKBsale
                     .category-wrapper
-                        a.category(href="catalog")
-                            .icon
-                                include ../../build/img/icons/car.svg
-                            h3 Авто аккумуляторы
-                        a.category(href="catalog")
-                            .icon
-                                include ../../build/img/icons/big-car.svg
-                            h3 Грузовые аккумуляторы
-                        a.category(href="catalog")
-                            .icon
-                                include ../../build/img/icons/moto.svg
-                            h3 Мото аккумуляторы
-                        a.category(href="catalog")
-                            .icon
-                                include ../../build/img/icons/ship.svg
-                            h3 Лодочные аккумуляторы
-                        a.category(href="catalog")
-                            .icon
-                                include ../../build/img/icons/bat.svg
-                            h3 Тяговые / для ИБП
-                        a.category(href="catalog")
-                            .icon
-                                include ../../build/img/icons/fuel.svg
-                            h3 Сопутствующие товары
-                        a.category(href="catalog")
-                            .icon.small
-                                include ../../build/img/icons/oil.svg
-                            h3 ИБП
+                        include includes/categories
                     a.main-banner(href="category")
                         .main-banner__wrapper
                             h2 АКЦИЯ
@@ -93,33 +21,7 @@ block content
         .container
             .popular-poducts__slider
                 - for (var x = 0; x < 4; x++)
-                    .poduct-demo
-                        a.img-wrapper(href="product")
-                            img(src="./img/product.png")
-                        a(href="product")
-                            h4 Аккумулятор Spark 55 Ач 450A обр. пол.
-                        .price
-                            h3.red 2 100*
-                            h4 / 2 600 руб.
-                        .price__description
-                            i *цена при обмене
-                        .availability
-                            .icon
-                                include ../../build/img/icons/tick.svg
-                            p Есть в наличии
-                        .characteristic
-                            p Ёмкость: 55 A·ч
-                            p Пусковой ток: 450 A
-                            p Полярность: Обратная
-                            p Габариты: 242x175x190
-                            p Гарантия: 24 месяца
-                        .btn-wrapper
-                            a.one-click(data-src="#one-click" href="javascript:;" data-fancybox)
-                                span Купить в один клик
-                        .btn-wrapper
-                            a.btn.btn-primary.btn-red(href="#bucket") в корзину
-                                .icon
-                                    include ../../build/img/icons/product-bucket.svg
+                    include includes/product-demo
 
     include includes/footer-faq
     include includes/footer-benefit

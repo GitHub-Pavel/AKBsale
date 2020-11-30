@@ -249,6 +249,12 @@
   border: 1px solid $black;
   padding: 30px;
 
+  input {
+    font-weight: $medium;
+    font-family: $montserrat;
+    font-size: 1.5rem;
+  }
+
   &__title {
     margin: -30px -30px 0;
     padding: 15px 0;
@@ -268,7 +274,7 @@
 
     .btn {
       @include col();
-      margin-top: 30px;
+      margin-top: 27px;
     }
 
     &__found {
@@ -278,7 +284,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 30px;
+      margin-top: 27px;
 
       @include elg(flex, none);
     }
@@ -411,8 +417,13 @@
   justify-content: space-between;
   border: 1px solid #grey;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  outline: none;
 
   @include col();
+
+  * {
+    outline: none;
+  }
 
   h4 {
     text-align: center;

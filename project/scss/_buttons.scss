@@ -4,7 +4,7 @@ input {
   background: transparent;
 }
 
-input[type="text"], input[type="tel"], textarea {
+input[type="text"], input[type="tel"], input[type="number"], textarea {
   border: 1px solid $grey-light;
   color: $black;
   font-size: 1.125rem;
@@ -68,8 +68,8 @@ button {
 // inputs
 .input-wrapper {
   h4 {
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin-top: 28px;
+    margin-bottom: 19px;
   }
 
   h5 {
@@ -90,6 +90,34 @@ button {
 
         @include xx(width, calc(100% - 20px));
       }
+    }
+  }
+
+  &__slider {
+    display: flex;
+    margin-left: -27px;
+    margin-right: -27px;
+
+    @include xx(flex-direction, column);
+  }
+
+  &__from, &__to {
+    display: flex;
+    align-items: center;
+    margin-left: 27px;
+    margin-right: 27px;
+    margin-top: 10px;
+
+    h5 {
+      margin: 0;
+      padding: 0;
+      margin-right: 20px;
+    }
+  }
+
+  &__from {
+    h5 {
+      @include xx(margin-right, 22px);
     }
   }
 }
@@ -135,5 +163,27 @@ button {
     transform: translateY(-50%);
     cursor: pointer;
     pointer-events: none;
+  }
+}
+
+.slider-range, .slider-range-min {
+  border: none;
+  border-radius: 10px;
+  background: $grey;
+  height: 6px;
+  margin-top: 20px;
+
+  .ui-widget-header {
+    background: $red;
+  }
+
+  .ui-state-default {
+    border: none;
+    border-radius: 50%;
+    background: $red;
+    width: 20px;
+    height: 20px;
+    top: -7px;
+    outline: none;
   }
 }

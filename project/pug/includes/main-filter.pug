@@ -1,0 +1,68 @@
+form.main-filter(method="GET" actoin="catalog")
+    .main-filter__title
+        h4 ПОДБОР АККУМУЛЯТОРА
+    .input-wrapper
+        h4  Производитель
+        .input-wrapper__inputs
+            label.select-wrapper
+                select(name="who")
+                    option Выберите из списка
+                .icon
+                    include ../../img/icons/align-down.svg
+    .input-wrapper
+        h4  Полярность
+        .input-wrapper__inputs
+            label.select-wrapper
+                select(name="com")
+                    option Выберите из списка
+                .icon
+                    include ../../img/icons/align-down.svg
+    .input-wrapper
+        h4  Тип аккумулятора
+        .input-wrapper__inputs
+            label.select-wrapper
+                select(name="bat")
+                    option Выберите из списка
+                .icon
+                    include ../../img/icons/align-down.svg
+    .input-wrapper
+        h4 Ёмкость
+        .input-wrapper__inputs
+            .input-wrapper__slider
+                .input-wrapper__from
+                    h5 От
+                    input(type="text" min="0" readonly class="from" name="capacity-from")
+                .input-wrapper__to
+                    h5 До
+                    input(type="text" max="500" readonly class="to" name="capacity-to")
+            .slider-range
+    .input-wrapper
+        h4  Габариты
+        .input-wrapper__inputs.input-wrapper__inputs_many
+            .input-wrapper
+                h5 Высота
+                .input-wrapper__inputs
+                    input(type="text" name="height")
+            .input-wrapper
+                h5 Ширина
+                .input-wrapper__inputs
+                    input(type="text" name="weight")
+            .input-wrapper
+                h5 Длина
+                .input-wrapper__inputs
+                    input(type="text" name="long")
+    .input-wrapper
+        h4 Цена
+        .input-wrapper__inputs
+            .input-wrapper__slider
+                .input-wrapper__from
+                    h5 От
+                    input(type="text" min="1" readonly class="from" name="capacity-from")
+                .input-wrapper__to
+                    h5 До
+                    input(type="text" max="500" readonly class="to" name="capacity-to")
+            .slider-range-min
+    .submit-wrapper
+        button.btn.btn-big.btn-red(type="submit") показать
+        .submit-wrapper__found
+            h5 Найдено 2092 вариантов
