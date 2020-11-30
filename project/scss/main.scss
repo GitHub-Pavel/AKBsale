@@ -13,10 +13,7 @@
 
 // header
 .header {
-  margin-bottom: 60px;
   position: relative;
-
-  @include md(margin-bottom, 30px);
 
   //header__top
   &__top {
@@ -50,6 +47,8 @@
   &__middle {
     padding: 12px 0 7px;
 
+    @include md(padding, 24px 0 20px);
+
     .list-information {
       &__wrapper {
         margin: -3px 0;
@@ -77,7 +76,7 @@
       margin-left: -30px;
 
       @include lg(margin-left, -25px);
-      //@include md(margin-left, 0px);
+      @include sm(margin-left, -15px);
     }
   }
 
@@ -88,6 +87,7 @@
     @include elg(order, 2);
     @include elg(margin-bottom, 20px);
     @include elg(margin-top, 5px);
+    @include md(display, none);
   }
 
   &__contacts {
@@ -113,30 +113,8 @@
     background: $black;
     padding: 16px 0;
 
-    span, a {
+    span, a, p {
       color: $white;
-    }
-
-    a {
-      font-weight: $bold;
-      text-align: center;
-      margin: 10px 0;
-      display: none;
-    }
-
-    .main-menu {
-      a {
-        display: block;
-      }
-    }
-
-    li a {
-      margin: 0;
-    }
-
-    p {
-      color: $white;
-      background: $red;
     }
 
     path {
@@ -144,14 +122,22 @@
     }
 
     @media screen and (max-width: 960px) {
-      position: absolute;
-      top: 100%;
+      position: fixed;
+      top: 0;
       left: 0;
       opacity: 0;
       width: 0;
+      height: calc(100vh - 63px);
       overflow: hidden;
-      transition: opacity .3s ease-in-out, width .3s ease-in-out .3s;
+      padding: 100px 0 0;
       z-index: 99;
+      background: rgba($black, .9);
+      transition: opacity .3s ease-in-out, width .1s ease-in-out .3s;
+
+      .container {
+        overflow-y: scroll;
+        height: 100%;
+      }
 
       a {
         display: block;
@@ -170,7 +156,6 @@
 // faq-phone
 .faq-phone {
   background: rgba(245, 245, 245, 0.74);
-  padding: 60px 0;
 
   h2 {
     margin-top: 20px;
@@ -180,7 +165,12 @@
   .atention {
     margin-top: 20px;
     color: $grey;
-    @include sm(text-align, center);
+
+    @include col();
+    @include size(12);
+
+    @include sm(order, 2);
+    @include sm(margin-top, 30px);
   }
 
   &__form {
@@ -189,7 +179,7 @@
     flex-wrap: wrap;
     justify-content: center;
 
-    @include sm(padding-top, 20px);
+    @include sm(padding-top, 10px);
 
     input, button {
       margin: 20px 10px 0;
@@ -199,10 +189,19 @@
       flex: 1 1 300px;
 
       @include sm(flex, auto);
+
+      &:first-child {
+        @include sm(order, 0);
+      }
+
+      &:last-child {
+        @include sm(order, 1);
+      }
     }
 
     button {
-      @include sm(margin-top, 40px);
+      @include sm(margin-top, 30px);
+      @include sm(order, 3);
     }
   }
 }// faq-phone
@@ -250,10 +249,6 @@
 
   &__about {
     margin-top: 60px;
-
-    p {
-      margin-top: 30px;
-    }
   }
 }// benefit
 
@@ -414,59 +409,57 @@
   }
 }// category-wrapper
 
-// popular-poducts
-.popular-poducts {
-  .container {
-    max-width: 1360px;
+
+// catalog
+.catalog {
+  .product-demo {
+    @include col();
+    @include size(4);
+
+    margin-top: 30px;
+  }
+}// catalog
+
+// AKB
+.akb {
+  @include md(padding-top, 0);
+
+  .content {
+    @include md(margin-top, 0);
+    display: flex;
+    flex-direction: column;
   }
 
-  .slick-arrow {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .icon {
-      width: 100%;
+  @media screen and (max-width: 960px) {
+    .category-wrapper {
+      order: 2;
     }
-  }
 
-  .slick-next {
-    right: -50px;
-  }
-
-  .slick-prev {
-    left: -70px;
-  }
-
-  .slick-dots {
-    display: flex;
-    justify-content: center;
-    bottom: -40px;
-  }
-
-  .slick-dots li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &.slick-active {
-      button {
-        opacity: 1;
-      }
-    }
-  }
-
-  .slick-dots li button {
-    border-radius: 50%;
-    background: $grey;
-    width: 3px;
-    height: 3px;
-    opacity: .5;
-
-    &:before {
+    .sidebar {
       display: none;
     }
+
+    h1 {
+      order: 0;
+    }
+
+    .main-banner {
+      order: 1;
+    }
   }
-}// popular-poducts
+}// AKB
+
+
+// popular-products
+.popular-products {
+  h2 {
+    margin-bottom: 70px;
+
+    @include sm(margin-bottom, 30px);
+  }
+
+  &__item {
+    display: flex !important;
+    justify-content: center;
+  }
+}

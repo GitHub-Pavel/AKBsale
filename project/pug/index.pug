@@ -1,7 +1,7 @@
 extends common/layout
 
 block content
-    section.akb#akb
+    section.section.akb#akb
         .container
             .row
                 .sidebar
@@ -14,14 +14,16 @@ block content
                         .main-banner__wrapper
                             h2 АКЦИЯ
                             .white-line
-                            .main-banner__content
-                                h3 при покупке аккумуляторов MNB скидка на источник бесперебойного питания HIDEN
-                                p.price 10%
-    section.popular-poducts#popular-poducts
+                            h3 при покупке аккумуляторов MNB скидка на источник бесперебойного питания HIDEN
+                            p.price 10%
+    section.section.popular-products#popular-poducts
         .container
-            .popular-poducts__slider
+            h2.text-center Популярные товары
+        .container.slider-arrow
+            .popular-products__slider
                 - for (var x = 0; x < 4; x++)
-                    include includes/product-demo
+                    .popular-products__item
+                        include includes/product-demo
 
     include includes/footer-faq
     include includes/footer-benefit

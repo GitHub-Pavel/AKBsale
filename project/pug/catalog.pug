@@ -1,0 +1,17 @@
+extends common/layout
+
+block content
+    section.catalog#catalog
+        .container
+            .row
+                .sidebar
+                    include includes/categories
+                    include includes/main-filter
+                .content
+                    .row
+                        - for (var x = 0; x < 9; x++)
+                            include includes/product-demo
+
+
+    include includes/footer-faq
+    include includes/footer-benefit

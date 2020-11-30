@@ -1,28 +1,23 @@
 .active-menu {
+ @include md(overflow, hidden);
+
   .header__bottom {
-    opacity: 1 !important;
+    opacity: 1;
     width: 100%;
-    transition: opacity .3s ease-in-out .3s, width .3s ease-in-out;
+    transition: opacity .3s ease-in-out .1s, width .1s ease-in-out;
   }
 
   #hamburger {
-    span {
-      transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
+    z-index: 100;
 
-      &:nth-child(1) {
-        top: 8px;
-        transform: rotate(45deg);
-      }
+    .open {
+      opacity: 0;
+      transition: opacity .1s ease-in-out .1s;
+    }
 
-      &:nth-child(2) {
-        top: 8px;
-        transform: rotate(45deg);
-      }
-
-      &:nth-child(3) {
-        top: 8px;
-        transform: rotate(-45deg);
-      }
+    .close {
+      opacity: 1;
+      transition: opacity .3s ease-in-out .1s;
     }
   }
 }

@@ -1,12 +1,65 @@
+.menu-bottom
+    .container
+        .menu-bottom__row
+            .menu-bottom__item.menu-bottom__item_filter
+                .menu-bottom__open
+                    .icon
+                        include  ../../img/icons/characteristics.svg
+                    p.menu-bottom__text Фильтр
+                .menu-bottom__close
+                    .icon
+                        include  ../../img/icons/times.svg
+                    p.menu-bottom__text Закрыть
+            .menu-bottom__item.menu-bottom__item_search
+                .menu-bottom__open
+                    .icon
+                        include  ../../img/icons/search.svg
+                    p.menu-bottom__text Поиск
+                .menu-bottom__close
+                    .icon
+                        include  ../../img/icons/times.svg
+                    p.menu-bottom__text Закрыть
+            .menu-bottom__item.menu-bottom__item_message
+                .menu-bottom__open
+                    .icon
+                        include  ../../img/icons/envelope.svg
+                    p.menu-bottom__text Написать нам
+                .menu-bottom__close
+                    .icon
+                        include  ../../img/icons/times.svg
+                    p.menu-bottom__text Закрыть
+            .menu-bottom__item.menu-bottom__item_phone
+                .menu-bottom__open
+                    .icon
+                        include  ../../img/icons/phone.svg
+                    p.menu-bottom__text Звонок
+                .menu-bottom__close
+                    .icon
+                        include  ../../img/icons/times.svg
+                    p.menu-bottom__text Закрыть
+            .menu-bottom__item.menu-bottom__item_bucket
+                .menu-bottom__open
+                    .bucket-icon
+                        .icon
+                            include ../../img/icons/bucket.svg
+                            p 1
+                    p.menu-bottom__text Корзина
+                .menu-bottom__close
+                    .icon
+                        include  ../../img/icons/times.svg
+                    p.menu-bottom__text Закрыть
+
+
 header.header#header
-    .header__top
+    .header__top.d-md-none
         .container
             .row.justify-between
                 .col.header__time
-                    .header__time-icon.icon
-                        include ../../img/icons/calendar.svg
+                    .header__time-icon
+                        .icon
+                            include ../../img/icons/calendar.svg
                     p.big пн - вс: 9:00 - 21:00
-                .col.header__bucket.d-md-none
+                .col.header__bucket
                     ul.stick-list
                         li
                             a(href="warranty")
@@ -14,9 +67,10 @@ header.header#header
                         li
                             a.bucket(href="bucket")
                                 span Корзина
-                                .bucket-icon.icon
-                                    include ../../img/icons/bucket.svg
-                                    p 1
+                                .bucket-icon
+                                    .icon
+                                        include ../../img/icons/bucket.svg
+                                        p 1
     .header__middle
         .container
             .row.align-center
@@ -24,9 +78,13 @@ header.header#header
                     a.logo(href="/")
                         img(src="./img/logo.png" alt="logotype")
                     a#hamburger.d-none.d-md-flex(href="#menu")
-                        span
-                        span
-                        span
+                        .open
+                            span
+                            span
+                            span
+                        .close
+                            .icon
+                                include ../../img/icons/times.svg
                 .col.header__search
                     form.search
                         input(type="text" placeholder="Введите фразу для поиска..." name="AKBsearch" autocomplete="off" required)
@@ -37,7 +95,7 @@ header.header#header
                             a(href="product") Аккумулятор Spark 55 Ач 450A обр. пол.
                             a(href="product") Аккумулятор Spark 55 Ач 450A обр. пол.
                             a(href="product") Аккумулятор Spark 55 Ач 450A обр. пол.
-                .col.header__contacts.d-sm-none
+                .col.header__contacts.d-md-none
                     ul.stick-list
                         li
                             a(href="mailto:info@mg77.ru")
@@ -53,23 +111,8 @@ header.header#header
                                         strong +7(495)122-14-70
                                     a(href="tel:+79038097049")
                                         strong +7(903)809-70-49
-                .col.header__bucket.d-none.d-md-flex.d-sm-none
-                    ul.stick-list
-                        li
-                            a(href="warranty")
-                                span Гарантия и возврат
-                        li
-                            a.bucket(href="bucket")
-                                span.d-xx-none Корзина
-                                .bucket-icon.icon
-                                    include ../../img/icons/bucket.svg
-                                    p 1
     nav.header__bottom
         .container
-            a.bucket(href="bucket")
-                .bucket-icon.icon
-                    include ../../img/icons/bucket.svg
-                    p 1
             ul.main-menu
                 li.current-menu-item
                     a(href="/") Главная
@@ -83,4 +126,20 @@ header.header#header
                     a(href="payment") Доставка и оплата
                 li
                     a(href="contacts") Контакты
-            a(href="warranty") Гарантия и возврат
+            .mobile-menu.d-none.d-md-flex
+                .list-information
+                    .list-information__icon
+                        .icon
+                            include ../../img/icons/phone.svg
+                    .list-information__wrapper
+                        a(href="tel:+74951221470")
+                            small +7(495)122-14-70
+                        a(href="tel:+79038097049")
+                            small +7(903)809-70-49
+                .header__time
+                    .header__time-icon
+                        .icon
+                            include ../../img/icons/calendar.svg
+                    p пн - вс: 9:00 - 21:00
+                a(href="warranty")
+                    span Гарантия и возврат

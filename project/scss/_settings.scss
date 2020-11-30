@@ -1,8 +1,6 @@
 // main
 html {
   font-size: 16px;
-
-  @include lg(font-size, 14px);
 }
 
 body {
@@ -17,6 +15,7 @@ body {
 // smartgrid
 .container {
   @include wrapper();
+  box-sizing: content-box;
 }
 
 .container-fluid {
@@ -34,7 +33,6 @@ body {
 // text
 p, strong, i {
   font-size: 1.125rem;
-  @include sm(font-size, 1rem);
 }
 
 a {
@@ -44,7 +42,7 @@ a {
   color: $black;
   display: block;
 
-  @include sm(font-size, 1.175rem);
+  @include sm(font-size, 1.125rem);
 
   span {
     text-decoration: underline;
@@ -63,16 +61,13 @@ strong {
 
 .big {
   font-size: 1.375rem;
-  @include sm(font-size, 1.175rem);
 }
 
 small {
   font-size: 1rem;
-  @include sm(font-size, 0.775rem);
 
   a {
     font-size: 1rem;
-    @include sm(font-size, 0.775rem);
     color: $blue-text;
     display: inline;
   }
@@ -86,31 +81,33 @@ small {
 // title
 h1 {
   font: $semi-bold 3.375rem $montserrat;
-  @include sm(font-size, 2.875rem);
-  @include xs(font-size, 2.575rem);
-  @include xs(font-size, 2.375rem);
+  @include sm(font-size, 2rem);
 
   margin: 0 0 30px;
 }
 
 h2 {
   font: $semi-bold 2.265rem $montserrat;
-  @include sm(font-size, 2rem);
+  @include sm(font-size, 1.5rem);
+  @include sm(font-weight, $bold);
+
+  margin-bottom: 30px;
 }
 
 h3 {
   font: $semi-bold 2rem $montserrat;
-  @include sm(font-size, 1.775rem);
+  @include sm(font-size, 1.125rem);
+  @include sm(font-weight, $bold);
 }
 
 h4 {
   font: $bold 1.5rem $montserrat;
-  @include sm(font-size, 1.375rem);
+  @include sm(font-size, 1.125rem);
 }
 
 h5 {
   font: $medium 1.5rem $montserrat;
-  @include sm(font-size, 1.375rem);
+  @include sm(font-size, 1.125rem);
 }
 
 // icons
@@ -125,6 +122,8 @@ svg {
 }
 
 // section
-section {
-  margin-bottom: 60px;
+.section {
+  padding: 60px 0;
+
+  @include sm(padding, 30px 0);
 }

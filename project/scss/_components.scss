@@ -38,11 +38,21 @@
 .logo {
   width: 100%;
   max-width: 317px;
+
+  @include sm(max-width, 216px);
 }// logo
 
 
 .search {
   position: relative;
+
+  @media screen and (max-width: 960px) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 199;
+  }
 
   &__window {
     position: absolute;
@@ -82,8 +92,8 @@
 
   input {
     padding: 12px 18px;
-    box-sizing: border-box;
     border-radius: 4px;
+    background: $white;
 
     ::placeholder {
       color: $grey;
@@ -110,16 +120,18 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 0 -15px;
+  margin: 0 -5px;
 
   @include md(flex-direction, column);
 
   li {
-    margin: 10px 15px;
+    margin: 10px 5px;
   }
 
   .current-menu-item {
     a {
+      display: block;
+
       &:after {
         width: 100%;
       }
@@ -153,8 +165,71 @@
       }
     }
   }
+
+  @media screen and (max-width: 960px) {
+    margin: -5px 0;
+    margin-bottom: 25px;
+
+    li {
+      display: flex;
+      justify-content: flex-end;
+      margin: 5px 0;
+    }
+
+    a {
+      font-size: 1.375rem;
+    }
+  }
 }// main-menu
 
+// mobile-menu
+.mobile-menu {
+  @media screen and (max-width: 960px) {
+    display: flex;
+    flex-direction: column;
+    font-weight: $regular;
+
+    p {
+      font-size: 1.125rem;
+    }
+
+    a {
+      text-align: right;
+      font-weight: $regular;
+    }
+
+    .icon {
+      width: 20px;
+    }
+
+    .list-information {
+      justify-content: flex-end;
+
+      &__wrapper {
+        margin: -5px 0;
+        a {
+          margin: 5px 0;
+        }
+      }
+
+      &__icon {
+        margin-right: 10px;
+      }
+    }
+
+    .header__time {
+      width: 100%;
+      justify-content: flex-end;
+      margin-top: 15px;
+      margin-bottom: 15px;
+
+      &-icon {
+        margin-right: 10px;
+        width: auto;
+      }
+    }
+  }
+}// mobile-menu
 
 .list-information {
   display: flex;
@@ -202,52 +277,82 @@
 // hamburger
 #hamburger {
   width: 30px;
-  height: 20px;
+  height: 30px;
   position: relative;
-  margin-bottom: 26px;
+  margin-bottom: 20px;
+
+  @include xs(margin-bottom, 10px);
+
+  .open {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .close {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .1s ease-in-out;
+
+    .icon {
+      width: 100%;
+      height: 100%;
+    }
+  }
 
   span {
-    position: absolute;
     left: 0;
-    height: 3px;
-    width: 30px;
+    height: 2px;
+    margin-bottom: 6px;
+    width: 100%;
     background: $black;
-    transition: top .3s ease-in-out .3s, transform .3s ease-in-out;
+    display: block;
 
-    &:nth-child(1) {
-      top: 0;
-    }
-
-    &:nth-child(2) {
-      top: 8px;
-    }
-
-    &:nth-child(3) {
-      top: 16px;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }
 
-//sidebar
+// sidebar
 .sidebar {
   @include col();
-  @include size(4.2);
+  @include size(4);
   @include size-elg(12);
 }
 
 .content {
   @include col();
-  @include size(7.8);
+  @include size(8);
   @include size-elg(12);
 
   @include elg(margin-top, 60px);
-}
+}// sidebar
 
 
 // main-filter
 .main-filter {
   border: 1px solid $black;
   padding: 30px;
+  background: $white;
+
+  @media screen and (max-width: 960px) {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: calc(100% - 35px);
+    z-index: 199;
+  }
 
   input {
     font-weight: $medium;
@@ -268,18 +373,21 @@
   }
 
   .submit-wrapper {
-    @include row-flex();
-
+    display: flex;
     justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    margin-right: -10px;
 
     .btn {
-      @include col();
+      margin-right: 10px;
+      margin-left: 10px;
       margin-top: 27px;
     }
 
     &__found {
-      @include col();
-
+      margin-left: 10px;
+      margin-right: 10px;
       flex: 1 1 180px;
       display: flex;
       align-items: center;
@@ -298,17 +406,17 @@
   border: 1px solid $black;
   display: flex;
   align-items: center;
-  min-height: 118px;
+  height: 118px;
   margin-top: 30px;
   width: 100%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   transition: background .3s ease-in-out;
 
-  @include xx(flex-direction, column);
-  @include xx(padding, 20px 0);
-
   .icon {
     width: 100px;
+
+    @include md(width, 60px);
+    @include sm(width, 40px);
 
     path {
       transition: fill .3s ease-in-out;
@@ -318,6 +426,13 @@
       width: 80px;
       margin-left: 10px;
       margin-right: 10px;
+
+      @include md(margin-left, 9px);
+      @include md(margin-right, 7px);
+      @include md(width, 45px);
+      @include sm(margin-left, 0);
+      @include sm(margin-right, 0);
+      @include sm(width, 40px);
     }
   }
 
@@ -325,9 +440,6 @@
     margin: 0 20px;
     transition: color .3s ease-in-out;
     flex: 1 1;
-
-    @include xx(text-align, center);
-    @include xx(margin-top, 15px);
   }
 
   &:hover {
@@ -342,7 +454,7 @@
     background: $red;
   }
 
-  &.current-category {
+  &.active {
     h3 {
       color: $white;
     }
@@ -352,6 +464,21 @@
     }
 
     background: $red;
+  }
+
+  @media screen and (max-width: 960px) {
+    height: 90px;
+    margin-top: 20px;
+  }
+
+  @media screen and (max-width: 780px) {
+    padding: 0 15px;
+    height: 70px;
+    margin-top: 10px;
+
+    h3 {
+      margin: 0 15px;
+    }
   }
 }// category
 
@@ -365,17 +492,13 @@
   background-image: url("../img/banner.jpg");
   color: $white;
 
-  &__content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  @include md(margin-top, 0);
+  @include md(margin-bottom, 20px);
 
-    h3 {
-      flex: 1 1;
+  h3 {
+    flex: 1 1;
 
-      @include xs(font-size, 1.5rem)
-    }
+    @include sm(font-size, 1.125rem)
   }
 
   &__wrapper {
@@ -384,11 +507,17 @@
     padding: 53px 55px 83px;
     background: rgba(0,0,0,.8);
 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
     @include xs(padding, 20px 40px);
   }
   
   .white-line {
     height: 3px;
+    width: 100%;
     background: #F5F5F5;
     box-shadow: 0px 1px 4px rgba(255, 255, 255, 0.4);
     margin-bottom: 10px;
@@ -399,25 +528,44 @@
     color: $red;
     margin-left: 20px;
     font: $semi-bold 3.375rem $montserrat;
-    @include sm(font-size, 2.875rem);
-    @include xs(font-size, 2.575rem);
-    @include xs(font-size, 2.375rem);
-    @include xs(width, 100%);
-    @include xs(margin-left, 0);
-    @include xs(margin-top, 10px);
+    @include sm(font-size, 2rem);
+  }
+
+  @media screen and (max-width: 780px) {
+    &__wrapper {
+      padding: 15px;
+    }
+
+    .price {
+      order: 1;
+    }
+
+    .white-line {
+      height: 1px;
+      order: 2;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      order: 0;
+    }
+
+    h3 {
+      order: 4;
+    }
   }
 }// main-banner
 
-// poduct-demo
-.poduct-demo {
+// product-demo
+.product-demo {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
   border: 1px solid #grey;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   outline: none;
+  max-width: 400px;
 
   @include col();
 
@@ -429,6 +577,8 @@
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-left: -5px;
+    margin-right: -5px;
   }
 
   a {
@@ -443,6 +593,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    flex-wrap: wrap;
     margin-bottom: 20px;
 
     * {
@@ -463,15 +614,8 @@
   }
 
   .img-wrapper {
-    &:hover {
-      img {
-        transform: scale(1.1);
-      }
-    }
-
     img {
       width: 100%;
-      transition: transform .3s ease-in-out;
       object-fit: cover;
     }
   }
@@ -514,7 +658,7 @@
     display: flex;
     justify-content: center;
   }
-}// poduct-demo
+}// product-demo
 
 // modal
 .modal {
@@ -564,3 +708,165 @@
     }
   }
 }// modal
+
+// slider
+.slider-arrow {
+    max-width: 1360px;
+    width: calc(100% - 160px);
+
+    @include sm(width, calc(100% - 80px));
+}
+
+.slick-arrow {
+  width: 30px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include sm(width, 16px);
+  @include sm(height, 30px);
+
+  &:before {
+    display: none;
+  }
+
+  .icon {
+    width: 100%;
+  }
+}
+
+.slick-next {
+  right: -50px;
+
+  @include sm(right, -20px);
+}
+
+.slick-prev {
+  left: -50px;
+
+  @include sm(left, -20px);
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  bottom: -40px;
+}
+
+.slick-dots li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.slick-active {
+    button {
+      opacity: 1;
+    }
+  }
+}
+
+.slick-dots li button {
+  border-radius: 50%;
+  background: $grey;
+  width: 3px;
+  height: 3px;
+  opacity: .5;
+
+  &:before {
+    display: none;
+  }
+}
+
+// menu-bottom
+.menu-bottom {
+  display: none;
+
+  @media screen and (max-width: 960px) {
+    display: block;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 63px;
+    overflow: hidden;
+    width: 100vw;
+    background: $red;
+    color: $white;
+    z-index: 9999;
+
+    path {
+      fill: $white;
+    }
+
+    &__row {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      transition: transform .3s ease-in-out;
+
+      &.active {
+        transform: translateY(-63px);
+      }
+    }
+
+    &__open {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 63px;
+      padding: 12px 0 9px;
+
+      .icon {
+        width: 25px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &__close {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 63px;
+      background: $burgundy;
+      padding: 12px 7px 9px;
+
+      .icon {
+        width: 15px;
+        height: 15px;
+        margin: 5px;
+      }
+    }
+
+    &__text {
+      font-size: .5625rem;
+      text-align: center;
+    }
+
+    .bucket-icon {
+      margin-left: 0px;
+      width: auto;
+
+      p {
+        width: 14px;
+        height: 14px;
+        background: $white;
+        color: $red;
+        font-size: .875rem;
+        right: -2px;
+      }
+
+      .icon {
+        width: 27px;
+        height: 28px;
+      }
+    }
+  }
+}// menu-bottom

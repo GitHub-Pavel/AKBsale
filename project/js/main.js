@@ -1,10 +1,18 @@
 $(function () {
-    $('#hamburger').on('click', function(e) {
+    $(document).on('click', '#hamburger', function(e) {
         e.preventDefault()
         $('body').toggleClass('active-menu')
     })
 
-    $('.popular-poducts__slider').slick({
+    $(document).on('click', '.menu-bottom__item', function(e) {
+        e.preventDefault()
+        if (!($(this).hasClass('active'))) {
+            $('.menu-bottom__item').removeClass('active')
+        }
+        $(this).toggleClass('active')
+    })
+
+    $('.popular-products__slider').slick({
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 3,
@@ -19,28 +27,17 @@ $(function () {
             '</svg></span></button>',
         responsive: [
             {
-                breakpoint: 1400,
-                settings: {
-                    arrows: false,
-                    dots: true
-                }
-            },
-            {
                 breakpoint: 1000,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2,
-                    arrows: false,
-                    dots: true
+                    slidesToScroll: 2
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 660,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: false,
-                    dots: true
+                    slidesToScroll: 1
                 }
             }
         ]
