@@ -28,10 +28,24 @@ block content
                 .content
                     h1.text-sm-center Авто аккумуляторы
                     .sort-row
+                        label.sort-input.d-none.d-md-flex
+                            h5 Показывать на странице:
+                            .sort-input__wrapper
+                                .select-wrapper
+                                    select
+                                        option 10
+                                        option(selected) 9
+                                        option 8
+                                        option 7
+                                        option 6
+                                        option 5
+                                        option 4
+                                    .icon
+                                        include ../img/icons/align-down.svg
                         label.sort-input
                             h5 Сортировка:
                             .sort-input__wrapper
-                                select
+                                select.sort-link
                                     option По возрастанию
                                     option По убыванию
                     .row
