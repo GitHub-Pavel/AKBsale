@@ -222,6 +222,8 @@
       margin: 20px auto 0;
       background: $red;
       box-shadow: 0px 2px 4px rgba(211, 36, 32, 0.4);
+
+      @include sm(display, none);
     }
   }
 
@@ -233,6 +235,8 @@
 
     margin-top: 60px;
     position: relative;
+
+    @include sm(margin-top, 30px);
   }
 
   &__icon {
@@ -240,16 +244,23 @@
 
     .icon {
       width: 114px;
+
+      @include sm(width, 80px);
     }
   }
 
   &__text {
     margin-left: 60px;
     margin-top: 60px;
+
+    @include sm(margin-top, 40px);
+    @include sm(margin-left, 40px);
   }
 
   &__about {
     margin-top: 60px;
+
+    @include sm(margin-top, 30px);
   }
 }// benefit
 
@@ -273,36 +284,50 @@
 
   h4 {
     margin-bottom: 20px;
+    @include sm(margin-bottom, 30px);
   }
 
   ul {
+    @include sm(margin, -10px 0);
 
     li {
       margin: 6px 0;
+
+      @include sm(margin, 10px 0);
     }
 
     a {
-      line-height: 115%;
+      line-height: 140%;
     }
+  }
+
+  p {
+    font-size: 1rem;
   }
 
   &__logo {
     @include size(4.8);
     @include size-elg(12);
 
-    @include sm(order, 3);
-
     margin-top: 30px;
     display: flex;
     flex-direction: column;
 
     @include elg(align-items, center);
-    @include sm(margin-bottom, 15px);
+    @include sm(margin-bottom, 0px);
+    @include sm(margin-top, 0px);
+
+    .footer__copyright {
+      @include sm(display, none);
+    }
   }
 
   &__copyright {
     display: flex;
     margin-top: 40px;
+
+    @include sm(margin-top, 30px);
+    @include sm(margin-bottom, 10px);
 
     .icon {
       width: 20px;
@@ -323,9 +348,6 @@
     @include size-elg(4);
     @include size-sm(12);
 
-    @include sm(order, 0);
-    @include sm(text-align, center);
-
     margin-top: 30px;
   }
 
@@ -334,10 +356,11 @@
     @include size-elg(4);
     @include size-sm(12);
 
-    @include sm(order, 1);
-    @include sm(text-align, center);
-
     margin-top: 30px;
+
+    a {
+      max-width: 194px;
+    }
   }
 
   &__contacts {
@@ -345,9 +368,10 @@
     @include size-elg(4);
     @include size-sm(12);
 
-    @include sm(order, 2);
-
     margin-bottom: -30px;
+
+    @include sm(margin-top, 10px);
+    @include sm(margin-bottom, -20px);
 
     .list-information {
       margin-top: 30px;
@@ -355,18 +379,12 @@
       display: flex;
       align-items: center;
 
-      @include sm(justify-content, center);
-
-      @include xs(align-items, center);
-      @include xs(flex-direction, column);
+      @include sm(margin-top, 20px);
+      @include sm(margin-bottom, 20px);
 
       &__icon {
         display: flex;
         align-items: center;
-
-        @include xs(margin-right, 0);
-        @include xs(margin-bottom, 15px);
-        @include xs(margin-top, 15px);
 
         .icon {
           display: flex;
@@ -392,7 +410,9 @@
   }
 
   &__address {
-    @include xs(text-align, center);
+    .list-information__wrapper {
+      max-width: 166px;
+    }
   }
 }// footer
 
