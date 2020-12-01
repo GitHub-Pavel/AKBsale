@@ -22,8 +22,12 @@ block content
         .container.slider-arrow
             .popular-products__slider
                 - for (var x = 0; x < 10; x++)
-                    .popular-products__item
-                        include includes/product-demo
+                    if x % 2 == 0
+                        .popular-products__item
+                            include includes/product-demo
+                    else
+                        .popular-products__item
+                            include includes/product-demo_nothig
 
     include includes/footer-faq
     include includes/footer-benefit

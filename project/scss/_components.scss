@@ -722,6 +722,13 @@
         fill: $green;
       }
     }
+
+    &.red {
+      color: $red;
+      path {
+        fill: $red;
+      }
+    }
   }
 
   .characteristic {

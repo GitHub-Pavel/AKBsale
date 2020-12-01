@@ -1,0 +1,27 @@
+.product-demo
+    a.img-wrapper(href="product")
+        img(src="./img/product.png" alt="Аккумулятор Spark 55 Ач 450A обр. пол.")
+    a(href="product")
+        h4 Аккумулятор Spark 55 Ач 450A обр. пол.
+    .price
+        h3.red 2 100*
+        h4 / 2 600 руб.
+    .price__description
+        i *цена при обмене
+    .availability.red
+        .icon
+            include ../../img/icons/times.svg
+        p Нет в наличии
+    .characteristic
+        p Ёмкость: 55 A·ч
+        p Пусковой ток: 450 A
+        p Полярность: Обратная
+        p Габариты: 242x175x190
+        p Гарантия: 24 месяца
+    .btn-wrapper
+        a.one-click(data-src="#one-click" href="javascript:;" data-fancybox)
+            span Купить в один клик
+    .btn-wrapper
+        a.btn.btn-primary.btn-red(href="#bucket") в корзину
+            .icon
+                include ../../img/icons/product-bucket.svg
