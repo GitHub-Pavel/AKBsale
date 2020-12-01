@@ -305,6 +305,28 @@
     font-size: 1rem;
   }
 
+  &__copyright {
+    margin-top: 40px;
+    display: none;
+
+    @include elg(display, flex);
+    @include elg(margin-top, 30px);
+    @include md(margin-bottom, 10px);
+
+    .icon {
+      width: 20px;
+      margin-right: 12px;
+      align-items: flex-start;
+    }
+
+    small {
+      max-width: 380px;
+
+      @include elg(max-width, 100%);
+      @include elg(flex, 1 1);
+    }
+  }
+
   &__logo {
     @include size(4.8);
     @include size-elg(12);
@@ -318,28 +340,8 @@
     @include sm(margin-top, 0px);
 
     .footer__copyright {
-      @include sm(display, none);
-    }
-  }
-
-  &__copyright {
-    display: flex;
-    margin-top: 40px;
-
-    @include sm(margin-top, 30px);
-    @include sm(margin-bottom, 10px);
-
-    .icon {
-      width: 20px;
-      margin-right: 12px;
-      align-items: flex-start;
-    }
-
-    small {
-      max-width: 380px;
-
-      @include elg(max-width, 100%);
-      @include elg(flex, 1 1);
+      display: flex;
+      @include elg(display, none);
     }
   }
 
