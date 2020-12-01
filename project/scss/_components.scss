@@ -1052,7 +1052,7 @@
   @include elg(margin-bottom, -30px);
   @include md(padding-top, 0px);
   @include sm(margin-bottom, -10px);
-  @include sm(max-width, 360px);
+  @include sm(max-width, 300px);
 
   span {
     margin-right: 2px;
