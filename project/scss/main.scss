@@ -444,6 +444,7 @@
 // AKB
 .akb {
   @include md(padding-top, 0);
+  @include sm(padding-top, 0);
 
   .content {
     @include md(margin-top, 0);

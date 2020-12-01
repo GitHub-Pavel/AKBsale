@@ -366,6 +366,8 @@
   @include col();
   @include size(4);
   @include size-elg(12);
+
+  @include sm(margin-top, 0);
 }
 
 .content {
@@ -374,6 +376,7 @@
   @include size-elg(12);
 
   @include elg(margin-top, 60px);
+  @include sm(margin-top, 0);
 }// sidebar
 
 
