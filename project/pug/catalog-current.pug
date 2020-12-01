@@ -5,7 +5,9 @@ block content
         .breadcrumbs
             a(href="index.html") Главна
             span /
-            p Каталог товаров
+            a(href="catalog.html") Каталог товаров
+            span /
+            p Авто аккумуляторы
     section.section.catalog#catalog
         .container
             .row
@@ -21,29 +23,15 @@ block content
                                         include ../img/icons/characteristics.svg
                             h2 Категории
                         .categories-side__row
-                            include includes/categories
+                            include includes/categories-current
                     include includes/main-filter
                 .content
-                    h1.text-sm-center Все товары
+                    h1.text-sm-center Авто аккумуляторы
                     .sort-row
-                        label.sort-input.d-none.d-md-flex
-                            h5 Показывать на странице:
-                            .sort-input__wrapper
-                                .select-wrapper
-                                    select
-                                        option 10
-                                        option(selected) 9
-                                        option 8
-                                        option 7
-                                        option 6
-                                        option 5
-                                        option 4
-                                    .icon
-                                        include ../img/icons/align-down.svg
                         label.sort-input
                             h5 Сортировка:
                             .sort-input__wrapper
-                                select.sort-link
+                                select
                                     option По возрастанию
                                     option По убыванию
                     .row

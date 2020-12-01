@@ -20,10 +20,20 @@ $(function () {
         })
     })
 
+    $(document).on('click', '.categories-side__button', function(e) {
+        e.preventDefault()
+        $(this).parent().toggleClass('active')
+        if ($(this).parent().hasClass('active')) {
+            $(this).parent().find('.categories-side__row').hide("slow")
+        } else {
+            $(this).parent().find('.categories-side__row').show("slow")
+        }
+    })
+
     $('.popular-products__slider').slick({
         infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 4,
+        slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 4000,
         arrows: true,
@@ -35,10 +45,15 @@ $(function () {
             '</svg></span></button>',
         responsive: [
             {
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
                 breakpoint: 1000,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2
                 }
             },
             {

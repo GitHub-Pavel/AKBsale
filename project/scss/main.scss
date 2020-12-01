@@ -7,10 +7,10 @@
 @import "fonts";
 @import "variables";
 @import "settings";
-@import "standarts";
 @import "buttons";
 @import "components";
 @import "body";
+@import "standarts";
 
 // header
 .header {
@@ -435,11 +435,28 @@
 
 // catalog
 .catalog {
+  .content {
+    .row {
+      @include xs(justify-content, center);
+    }
+  }
+
   .product-demo {
     @include col();
     @include size(4);
+    @include size-md(6);
+    @include size-xs(9.4);
 
-    margin-top: 30px;
+    margin-bottom: 30px;
+    @include xs(margin-bottom, 20px);
+  }
+
+  .sort-input {
+    margin-bottom: 15px;
+  }
+
+  .sort-row {
+    margin-bottom: 30px;
   }
 }// catalog
 

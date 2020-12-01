@@ -21,8 +21,8 @@ input, textarea, select {
   transition: border-color .3s ease-in-out, box-shadow .3s ease-in-out;
 
   &:focus, &:active {
-    border-color: #6996DA !important;
-    box-shadow: 0px 1px 10px rgba(0, 10, 97, 0.2) !important;
+    border-color: #6996DA;
+    box-shadow: 0px 1px 10px rgba(0, 10, 97, 0.2);
   }
 }
 
@@ -59,6 +59,8 @@ button {
 // size
 .btn-primary {
   padding: 18px 19px;
+
+  @include sm(padding, 14px 19px);
 }
 
 .btn-big {
@@ -205,7 +207,7 @@ button {
     cursor: pointer;
     background: $white;
 
-    @include sm(padding, 8px 20px);
+    @include md(padding, 8px 20px);
 
     option {
       font-family: inherit;
