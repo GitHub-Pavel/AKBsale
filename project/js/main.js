@@ -20,7 +20,6 @@ $(function () {
         })
     })
 
-    $('.categories-side.active').find('.categories-side__row').hide("slow")
     $(document).on('click', '.categories-side__button', function(e) {
         e.preventDefault()
         $(this).parent().toggleClass('active')
@@ -129,6 +128,33 @@ $(function () {
         })
     })
 
+    $('.input-plus').each(function() {
+        $(this).on('click', '.input-plus__button', function(e) {
+            e.preventDefault()
+            if ($(this).hasClass('input-plus__button_plus')) {
+                $(this).prev().val(+$(this).prev().val()+1)
+            } else if ($(this).hasClass('input-plus__button_minus')) {
+                if (+$(this).next().val() > 1) {
+                    $(this).next().val(+$(this).next().val()-1)
+                }
+            }
+            changeBasket()
+        })
+
+        $(this).on('input', 'input', function() {
+            $(this).val($(this).val().replace(/[A-Za-zА-Яа-яЁё]/, ''))
+
+            changeBasket()
+        })
+
+        $(this).on('blur', 'input', function() {
+            if (+$(this).val() < +$(this).data('min')) {
+                $(this).val($(this).data('min'))
+            }
+
+            changeBasket()
+        })
+    })
 
     // Sliders
 
@@ -209,4 +235,17 @@ $(function () {
             }
         ]
     })
+
+    changeBasket()
 })
+$('.categories-side.active').find('.categories-side__row').hide("slow")
+
+function changeBasket() {
+    let allProducts = 0
+
+    $('.basket-products__product').each(function() {
+        allProducts += +$(this).find('input').val()
+    })
+
+    $('.basket-products__bottom .basket-products__count h4').text(allProducts+' шт.')
+}

@@ -14,7 +14,7 @@ input[type="text"], input[type="tel"], input[type="number"], textarea {
   }
 }
 
-input, textarea, select {
+input[type="text"], input[type="tel"], input[type="number"], textarea, select {
   border-radius: 0px;
   width: 100%;
   background: transparent;
@@ -74,6 +74,10 @@ button {
   @include sm(padding, 9px 34px);
 }
 
+.btn-small {
+  padding: 15px 14px;
+}
+
 // color
 .btn-black {
   background: $black;
@@ -111,6 +115,25 @@ button {
       fill: $red;
     }
   }
+}
+
+.btn-burgundy {
+  background: $burgundy;
+  border-color: $burgundy;
+
+  &:hover {
+    background: $red;
+    border-color: $red;
+  }
+
+  &:focus, &.active, , &:active {
+  background: $white;
+  color: $burgundy;
+
+  path {
+    fill: $burgundy;
+  }
+}
 }
 
 // inputs
@@ -259,3 +282,87 @@ button {
     outline: none;
   }
 }
+
+// input-plus
+.input-plus {
+  display: flex;
+  justify-content: center;
+  border: 1px solid $grey-light;
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $grey-light;
+    margin: -1px;
+    width: 30px;
+  }
+
+  input {
+    padding: 9px 2px;
+    border: none;
+    width: 40px;
+    text-align: center;
+
+    @include elg(padding, 5px 2px);
+    @include sm(font-size, 1rem);
+    @include sm(padding, 7px 2px);
+
+    &:focus {
+      box-shadow: none;
+      border: none;
+    }
+  }
+
+  a {
+    font-size: 1.5rem;
+
+    @include sm(font-size, 1rem);
+  }
+}// input-plus
+
+// radio-wrapper
+.radio-wrapper {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  position: relative;
+
+  .box {
+    width: 22px;
+    height: 22px;
+    border: 1px solid $black;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &:after {
+      content: '';
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: $black;
+      display: block;
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      opacity: 0;
+    }
+  }
+
+  input:checked ~ .box {
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  input {
+    margin-right: 30px;
+    opacity: 0;
+  }
+
+  p {
+
+  }
+}// radio-wrapper

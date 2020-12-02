@@ -744,3 +744,402 @@
     }
   }
 }// product
+
+// basket
+.basket {
+
+  h1 {
+    margin-bottom: 60px;
+
+    @include sm(margin-bottom, 30px);
+  }
+
+  &-products {
+    &__top, &__middle, &__bottom {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    &__top {
+      @include elg(display, none);
+    }
+
+    &__middle {
+      padding: 15px 0;
+      margin: 30px 0;
+      border-top: 1px solid $grey-light;
+      border-bottom: 1px solid $grey-light;
+      flex-wrap: wrap;
+
+      @include elg(margin-top, 0);
+      @include sm(padding, 10px 15px);
+      @include sm(margin, 0 -15px 30px);
+
+      h5 {
+        max-width: 340px;
+      }
+
+      h4 {
+        display: none;
+      }
+
+      @media screen and (max-width: 1315px) {
+        .basket-products__capacity,
+        .basket-products__count,
+        .basket-products__price {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          flex: none;
+          order: 2;
+          padding: 10px 0;
+
+          h4 {
+            display: flex;
+          }
+        }
+
+        .basket-products__capacity {
+          margin-top: 10px;
+        }
+
+        .basket-products__count {
+          border-bottom: 1px solid #F5F5F5;
+          border-top: 1px solid #F5F5F5;
+        }
+
+        .basket-products__button {
+          order: 1;
+          flex: none;
+          margin: 0 15px;
+        }
+
+        .basket-products__name {
+          order: 0;
+        }
+      }
+
+      .basket-products__button {
+        @include sm(margin, 0 -15px);
+      }
+    }
+
+    &__bottom {
+      @media screen and (max-width: 1315px) {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+
+        .basket-products__count,
+        .basket-products__price,
+        .basket-products__button,
+        .basket-products__name {
+          flex: none;
+        }
+
+        .basket-products__count {
+          width: 100%;
+          order: 0;
+          justify-content: flex-end;
+          margin-bottom: 10px;
+        }
+
+        .basket-products__price {
+          order: 2;
+          margin-top: 5px;
+        }
+
+        .basket-products__button {
+          width: 100%;
+          order: 3;
+          justify-content: flex-end;
+          margin-top: 20px;
+        }
+
+        .basket-products__name {
+          order: 1;
+          margin-right: 10px;
+
+          h3 {
+            @include sm(font-size, 1.5rem);
+          }
+        }
+
+        .basket-products__capacity {
+          display: none;
+        }
+      }
+    }
+
+    &__name {
+      flex: 1 1 550px;
+      display: flex;
+      align-items: center;
+
+      @include sm(flex, none);
+
+      h3 {
+        @include elg(font-weight, $medium);
+      }
+
+      @media screen and (max-width: 780px) {
+        h5 {
+          max-width: 190px;
+        }
+      }
+    }
+
+    &__capacity, &__count, &__price, &__button {
+      flex: 1 1 176px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__button {
+      a.black {
+        height: 60px;
+        width: 60px;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background .3s ease-in-out, border-color .3s ease-in-out;
+
+        path {
+          transition: fill .3s ease-in-out;
+        }
+
+        .icon {
+          width: 30px;
+          margin: 0;
+        }
+
+        &:hover {
+          background: $red;
+          border-color: $red;
+
+          path {
+            fill: $white;
+          }
+        }
+
+        &:focus {
+          background: transparent;
+          border-color: $red;
+
+          path {
+            fill: $red;
+          }
+        }
+
+        @media screen and (max-width: 780px) {
+          width: 45px;
+          height: 45px;
+          border-radius: 0;
+
+          .icon {
+            width: 15px;
+          }
+
+          &:focus {
+            background: transparent;
+            border-color: transparent;
+
+            path {
+              fill: $black;
+            }
+          }
+
+          &:hover {
+            background: transparent;
+            border-color: transparent;
+
+            path {
+              fill: $black;
+            }
+          }
+        }
+      }
+    }
+
+    &__img-wrapper {
+      width: 180px;
+      height: 180px;
+      padding: 15px;
+      border: 1px solid $grey;
+      margin-right: 30px;
+
+      img {
+        object-fit: cover;
+      }
+
+      @media screen and (max-width: 780px) {
+        width: 120px;
+        height: 120px;
+        margin-right: 10px;
+      }
+
+      @media screen and (max-width: 370px) {
+        width: 80px;
+        height: 80px;
+        padding: 5px;
+      }
+    }
+
+    &__product {
+      width: 100%;
+      margin: 15px 0;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap-reverse;
+      @include elg(flex-wrap, wrap);
+      @include sm(justify-content, space-between);
+    }
+  }
+
+  &-form {
+    .container {
+      overflow: hidden;
+    }
+
+    h2 {
+      margin-bottom: 0;
+    }
+
+    &__double {
+      padding: 0 60px;
+      flex: 1 1 580px;
+      margin-bottom: 60px;
+
+      @include sm(margin-bottom, 20px);
+      @include elg(padding, 0 30px);
+
+      &:last-child {
+        .input-wrapper {
+          p {
+            max-width: 90px;
+          }
+        }
+      }
+
+      &-wrapper {
+        margin: 0 -60px;
+        display: flex;
+        flex-wrap: wrap;
+
+        @include elg(margin, 0 -30px);
+      }
+    }
+
+    &__triple {
+      padding: 0 30px;
+      margin-bottom: 60px;
+
+      @include sm(margin-bottom, 20px);
+
+      &:nth-child(1) {
+        flex: 1 1 500px;
+      }
+
+      &:nth-child(2) {
+        flex: 1 1 400px;
+      }
+
+      &:nth-child(6) {
+        flex: 1 1 400px;
+      }
+
+      h3, h4 {
+        margin-bottom: 10px;
+      }
+
+      &-wrapper {
+        margin: 0 -30px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    .input-wrapper {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      @include sm(flex-direction, column);
+      @include sm(margin-top, 20px);
+
+      &__inputs {
+        width: auto;
+        flex: 1 1;
+
+        @include sm(width, 100%);
+        @include sm(flex, none);
+      }
+
+      p {
+        margin-top: 15px;
+        width: 150px;
+
+        @include sm(width, 100%);
+        @include sm(margin, 0 0 10px);
+      }
+
+      &__additionally {
+        display: flex;
+        align-items: center;
+        margin-top: 25px;
+
+        input {
+          max-width: 150px;
+        }
+
+        span {
+          margin: 0 10px;
+          font-family: $montserrat;
+          font-weight: $medium;
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    &__submit {
+      padding-top: 10px;
+      border-top: 1px solid $grey-light;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include sm(flex-direction, column);
+      @include sm(padding-top, 0);
+      @include sm(margin-top, 10px);
+
+      .btn {
+        margin-top: 30px;
+      }
+    }
+
+    &__result {
+      @include sm(width, 100%);
+      margin-top: 10px;
+    }
+
+    &__description {
+      display: flex;
+      margin-top: 20px;
+      h4 {
+        margin-right: 30px;
+
+        @include sm(margin-right, 5px);
+      }
+    }
+
+    .radio-wrapper {
+      margin-top: 20px;
+    }
+  }
+}// basket

@@ -1,0 +1,158 @@
+extends common/layout
+
+block content
+    .container
+        .breadcrumbs
+            a(href="index.html") Главна
+            span /
+            p Корзина
+    section.section.basket#basket
+        .container
+            h1.text-center Корзина
+            .basket-products
+                .basket-products__top
+                    .basket-products__name
+                        h3 Наименование
+                    .basket-products__capacity
+                        h4 Ёмкость
+                    .basket-products__count
+                        h4 Количество
+                    .basket-products__price
+                        h4 Цена
+                    .basket-products__button
+                .basket-products__middle
+                    .basket-products__product
+                        .basket-products__name
+                            .basket-products__img-wrapper
+                                img(src="./img/product.png" alt="product")
+                            h5 Аккумулятор Spark 55 Ач 450A обр. пол.
+                        .basket-products__capacity
+                            h4 Ёмкость
+                            h5 55 А·ч
+                        .basket-products__count
+                            h4 Количество
+                            .input-plus
+                                a.input-plus__button.input-plus__button_minus(href="#minus") -
+                                input(type="text" value="1" data-min="1")
+                                a.input-plus__button.input-plus__button_plus(href="#plus") +
+                        .basket-products__price
+                            h4 Цена
+                            h5 2 600 руб.
+                        .basket-products__button
+                            a.black(href="#delete")
+                                .icon
+                                    include ../img/icons/times.svg
+                    .basket-products__product
+                        .basket-products__name
+                            .basket-products__img-wrapper
+                                img(src="./img/product.png" alt="product")
+                            h5 Аккумулятор Spark 55 Ач 450A обр. пол.
+                        .basket-products__capacity
+                            h4 Ёмкость
+                            h5 55 А·ч
+                        .basket-products__count
+                            h4 Количество
+                            .input-plus
+                                a.input-plus__button.input-plus__button_minus(href="#minus") -
+                                input(type="text" value="1" data-min="1")
+                                a.input-plus__button.input-plus__button_plus(href="#plus") +
+                        .basket-products__price
+                            h4 Цена
+                            h5 2 600 руб.
+                        .basket-products__button
+                            a.black(href="#delete")
+                                .icon
+                                    include ../img/icons/times.svg
+                .basket-products__bottom
+                    .basket-products__name
+                        h3 итого:
+                    .basket-products__capacity
+                        h4 55 А·ч
+                    .basket-products__count
+                        h4 1 шт.
+                    .basket-products__price
+                        h4 2 600 руб.
+                    .basket-products__button
+                        a.btn.btn-small.btn-burgundy(href="#delete-all") УДАЛИТЬ всё
+    section.section.basket-form#basket-form
+        .container
+            .basket-form__double-wrapper
+                .basket-form__double
+                    h2 Данные получателя:
+                    label.input-wrapper
+                        p Получатель*
+                        .input-wrapper__inputs
+                            input(type="text" name="name" placeholder="Получатель*" required)
+                    label.input-wrapper
+                        p Телефон*
+                        .input-wrapper__inputs
+                            input(type="tel" name="tel" placeholder="Телефон*" required)
+                    label.input-wrapper
+                        p Комментарий
+                        .input-wrapper__inputs
+                            textarea(placeholder="Комментарий" name="message" rows="4")
+                .basket-form__double
+                    h2 Адрес доставки:
+                    label.input-wrapper
+                        p Город
+                        .input-wrapper__inputs
+                            input(type="text" name="city" placeholder="Город")
+                    label.input-wrapper
+                        p Улица
+                        .input-wrapper__inputs
+                            input(type="text" name="street" placeholder="Улица")
+                            .input-wrapper__additionally
+                                input(type="text" name="home" placeholder="Дом")
+                                span /
+                                input(type="text" name="hometown" placeholder="Квартира")
+            .basket-form__triple-wrapper
+                .basket-form__triple
+                    h3 Варианты доставки:
+                    label.radio-wrapper
+                        input(type="radio" name="payment" value="pickup" required)
+                        .box
+                        p Самовывоз м. Первомайская, 7-я Парковая 24А
+                    label.radio-wrapper
+                        input(type="radio" name="payment" value="moscow" required)
+                        .box
+                        p Доставка по Москве и МО
+                    label.radio-wrapper
+                        input(type="radio" name="payment" value="tk_rf" required)
+                        .box
+                        p Отправка ТК по РФ
+                .basket-form__triple
+                    h3 Способы оплаты:
+                    label.radio-wrapper
+                        input(type="radio" name="delivery" value="cash" required)
+                        .box
+                        p Оплата наличными при получении
+                    label.radio-wrapper
+                        input(type="radio" name="delivery" value="card" required)
+                        .box
+                        p Оплата картой
+                    label.radio-wrapper
+                        input(type="radio" name="delivery" value="bank" required)
+                        .box
+                        p Счет на юр. лицо
+                .basket-form__triple
+                    h4 Дополнительные услуги
+                    label.radio-wrapper
+                        input(type="checkbox" name="dop-one" value="setup")
+                        .box
+                        p Интересует установка аккумулятора
+                    label.radio-wrapper
+                        input(type="checkbox" name="dop-one" value="discount")
+                        .box
+                        p Получить скидку за сдачу старого аккумулятора
+            .basket-form__submit
+                .basket-form__result
+                    .basket-form__description
+                        h4 Скидка за утилизацию:
+                        h5 0 руб.
+                    .basket-form__description
+                        h4 Итого:
+                        h5 2 600 руб.
+                    .basket-form__description
+                        h4 Итого, со скидкой:
+                        h5 2 600 руб.
+                button.btn.btn-red.btn-small(type="submit") оформить заказ
