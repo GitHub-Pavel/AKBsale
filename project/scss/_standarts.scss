@@ -49,3 +49,11 @@
 .d-xx-none {
   @include xx(display, none !important);
 }
+
+.d-block {
+  display: block;
+}
+
+.d-md-block {
+  @include md(display, block);
+}

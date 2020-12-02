@@ -80,6 +80,53 @@ footer.footer#footer
         .btn-wrapper
             button.btn.btn-red.btn-primary(type="submit") заказать звонок
 
+#cheaper.modal
+    h2.text-center Нашли дешевле ?
+    p.modal__description Пришлите нам ссылку на этот товар в другом магазине,и мы с Вами свяжемся и сделаем предложениею
+    form
+        .input-wrapper
+            p  Имя
+            .input-wrapper__inputs
+                input(type="text" name="name" placeholder="Введите ваше имя" required)
+        .input-wrapper
+            p  Телефон
+            .input-wrapper__inputs
+                input(type="tel" name="tel" placeholder="Введите ваш телефон" required)
+        .input-wrapper
+            p  Ссылка на товар
+            .input-wrapper__inputs
+                input(type="text" name="link_to_product" placeholder="Введите ссылку на товар" required)
+        .input-wrapper
+            p  Комментарий
+            .input-wrapper__inputs
+                textarea(placeholder="Введите текст сообщения" name="message" rows="4")
+        .descripton
+            small Нажимаю на кнопку, вы даете согласие на
+                a(href="policy") обработку персональных данных
+        .btn-wrapper
+            button.btn.btn-red.btn-primary(type="submit") Отправить
+
+#faq.modal
+    h2.text-center Связаться с нами
+    form
+        .input-wrapper
+            p  Имя
+            .input-wrapper__inputs
+                input(type="text" name="name" placeholder="Введите ваше имя" required)
+        .input-wrapper
+            p  E-mail
+            .input-wrapper__inputs
+                input(type="text" name="name" placeholder="Введите ваш e-mail" required)
+        .input-wrapper
+            p  Комментарий
+            .input-wrapper__inputs
+                textarea(placeholder="Введите текст сообщения" name="message" rows="4" required)
+        .descripton
+            small Нажимаю на кнопку, вы даете согласие на
+                a(href="policy") обработку персональных данных
+        .btn-wrapper
+            button.btn.btn-red.btn-primary(type="submit") Отправить
+
 #search
     form.search
         input(type="text" placeholder="Введите фразу для поиска..." name="AKBsearch" autocomplete="off" required)

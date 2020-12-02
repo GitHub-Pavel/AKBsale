@@ -234,6 +234,7 @@
     a {
       text-align: right;
       font-weight: $regular;
+      font-size: 1.125rem;
     }
 
     .icon {
@@ -682,58 +683,10 @@
     }
   }
 
-  .price {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-
-    * {
-      margin: 0;
-    }
-
-    &__description {
-      color: $red;
-      text-decoration: underline;
-      margin-bottom: 20px;
-      display: flex;
-      justify-content: center;
-    }
-
-    .red {
-      color: $red;
-    }
-  }
-
   .img-wrapper {
     img {
       width: 100%;
       object-fit: cover;
-    }
-  }
-
-  .availability {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: $green;
-    margin-bottom: 22px;
-
-    .icon {
-      width: 20px;
-      margin-right: 10px;
-
-      path {
-        fill: $green;
-      }
-    }
-
-    &.red {
-      color: $red;
-      path {
-        fill: $red;
-      }
     }
   }
 
@@ -747,10 +700,6 @@
 
   .one-click {
     margin-bottom: 20px;
-    color: $red;
-    span {
-      font-size: 1.375rem;
-    }
   }
 
   .btn {
@@ -761,7 +710,70 @@
     display: flex;
     justify-content: center;
   }
-}// product-demo
+
+  .product-availability {
+    margin-bottom: 22px;
+  }
+
+  .product-price {
+    margin-bottom: 20px;
+
+    &__description {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.product-availability {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $green;
+
+  .icon {
+    width: 20px;
+    margin-right: 10px;
+
+    path {
+      fill: $green;
+    }
+  }
+
+  &.red {
+    color: $red;
+    path {
+      fill: $red;
+    }
+  }
+}
+
+.product-price {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  * {
+    margin: 0;
+  }
+
+  h2,h3,h4 {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__description {
+    color: $red;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+  }
+
+  .red {
+    color: $red;
+  }
+}
+// product
 
 // modal
 .modal {
@@ -769,6 +781,12 @@
   max-width: 600px;
   padding: 60px;
   display: none;
+
+  &__description {
+    text-align: center;
+    margin: 0 -30px;
+    margin-top: 30px;
+  }
 
   form {
     margin-top: 30px;
@@ -1094,6 +1112,7 @@
 
   h2 {
     line-height: 51px;
+    margin-bottom: 0;
 
     @include sm(line-height, 29px);
   }
@@ -1234,3 +1253,116 @@
     }
   }
 }// pagination
+
+// tabs
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    width: calc(100% / 3);
+    height: 70px;
+    margin-bottom: -1px;
+    border-radius: 6px 6px 0px 0px;
+    position: relative;
+
+    &.active {
+      z-index: 1;
+      border: 1px solid $grey-light;
+      border-bottom-color: $white;
+      padding: 9px 19px;
+
+      .icon-open {
+        transform: rotate(180deg);
+      }
+    }
+
+    .icon {
+      width: 40px;
+      margin-right: 20px;
+
+      @include sm(width, 30px);
+
+      path {
+        stroke: $black;
+      }
+    }
+
+    .icon-open {
+      display: none;
+      @include elg(display, flex);
+
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20px;
+
+      @include sm(right, 18px);
+
+      .icon {
+        width: 13px;
+        margin: 0;
+      }
+    }
+  }
+
+  &__window {
+    width: 100%;
+    border: 1px solid $grey-light;
+    padding: 30px;
+    display: none;
+    flex-direction: column;
+
+    @include sm(padding, 10px);
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  @media screen and (max-width: 1315px) {
+    &__button {
+      width: 100%;
+      border-radius: 0;
+      border: 1px solid $grey-light;
+      background: #e5e5e5;
+      padding: 10px 10px;
+      justify-content: flex-start;
+
+      &.active {
+        border-bottom-color: $grey-light;
+        padding: 10px 10px;
+      }
+    }
+
+    &__window {
+      margin-bottom: -1px;
+      padding: 15px;
+    }
+
+    :nth-child(1) {
+      order: 0;
+      border-radius: 6px 6px 0px 0px;
+    }
+    :nth-child(2) {
+      order: 2;
+    }
+    :nth-child(3) {
+      order: 4;
+    }
+
+    :nth-child(4) {
+      order: 1;
+    }
+    :nth-child(5) {
+      order: 3;
+    }
+    :nth-child(6) {
+      order: 5;
+    }
+  }
+}// tabs

@@ -42,7 +42,38 @@ a {
   color: $black;
   display: block;
 
-  @include sm(font-size, 1.125rem);
+  &.black {
+    color: $black;
+    text-decoration: underline;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    .icon {
+      width: 34px;
+      margin-right: 18px;
+    }
+  }
+
+  &.red {
+    color: $red;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    path {
+      fill: $red;
+    }
+
+    span {
+      font-size: 1.375rem;
+    }
+  }
 
   span {
     text-decoration: underline;

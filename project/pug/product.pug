@@ -1,0 +1,168 @@
+extends common/layout
+
+block content
+    .container
+        .breadcrumbs
+            a(href="index.html") Главна
+            span /
+            a(href="catalog.html") Каталог товаров
+            span /
+            p Авто аккумуляторы
+    section.section.product#product
+        .container
+            .product__row
+                .product__sliders
+                    .product__slider.product__slider_big
+                        -for (let i = 0; i < 6; i++)
+                            a.product__img(href="./img/big-product.jpg" data-fancybox="product-slider" data-width="1500" data-height="1500")
+                                img(src="./img/big-product.jpg" alt="product")
+                    .product__slider.product__slider_small
+                        -for (let i = 0; i < 6; i++)
+                            .product__thumb
+                                img(src="./img/product.png" alt="product")
+                    .d-md-block.d-none
+                        h5 Артикул: -
+                        .product-availability
+                            .icon
+                                include ../img/icons/tick.svg
+                            p Есть в наличии
+                        .product-price__wrapper
+                            .product-price
+                                h2.red 2 100*
+                                h3 / 2 600 руб.
+                            a.black.cheaper(data-src="#cheaper" href="javascript:;" data-fancybox) Нашли дешевле?
+                            .product-price__description
+                                i *2 100 руб. цена при сдаче старого аккумулятора
+                        .product__benefit
+                            h5 Производитель:
+                            h5 Spark
+                        .product__benefit
+                            h5 Гарантия:
+                            h5 24 месяца
+                        .product__faq
+                            a.black(href="payment.html")
+                                .icon
+                                    include ../img/icons/box.svg
+                                | Доставка и оплата
+                            a.black(data-src="#faq" href="javascript:;" data-fancybox)
+                                .icon
+                                    include ../img/icons/question.svg
+                                | Задать вопрос о товаре
+                        .product__buttons
+                            a.btn.btn-primary.btn-red(href="#bucket") в корзину
+                                .icon
+                                    include ../img/icons/product-bucket.svg
+                            a.red(data-src="#one-click" href="javascript:;" data-fancybox) Купить в один клик
+                .product__description
+                    .d-none.d-md-flex
+                        .categories-side.active
+                            a(href="#open-categories").categories-side__button
+                                .icon-wrapper
+                                    .categories-side__icon.categories-side__icon_times
+                                        .icon
+                                            include ../img/icons/times.svg
+                                    .categories-side__icon
+                                        .icon
+                                            include ../img/icons/characteristics.svg
+                                h2 Категории
+                            .categories-side__row
+                                include includes/categories
+                    h1 Аккумулятор Spark 55 Ач 450A обр. пол.
+                    .d-md-none.d-block
+                        h5 Артикул: -
+                        .product-availability
+                            .icon
+                                include ../img/icons/tick.svg
+                            p Есть в наличии
+                        .product-price__wrapper
+                            .product-price
+                                h2.red 2 100*
+                                h3 / 2 600 руб.
+                            a.black.cheaper(data-src="#cheaper" href="javascript:;" data-fancybox) Нашли дешевле?
+                            .product-price__description
+                                i *2 100 руб. цена при сдаче старого аккумулятора
+                        .product__benefit
+                            h5 Производитель:
+                            h5 Spark
+                        .product__benefit
+                            h5 Гарантия:
+                            h5 24 месяца
+                        .product__faq
+                            a.black(href="payment.html")
+                                .icon
+                                    include ../img/icons/box.svg
+                                | Доставка и оплата
+                            a.black(data-src="#faq" href="javascript:;" data-fancybox)
+                                .icon
+                                    include ../img/icons/question.svg
+                                | Задать вопрос о товаре
+                        .product__buttons
+                            a.btn.btn-primary.btn-red(href="#bucket") в корзину
+                                .icon
+                                    include ../img/icons/product-bucket.svg
+                            a.red(data-src="#one-click" href="javascript:;" data-fancybox) Купить в один клик
+            .tabs
+                a(href="#tab").tabs__button.active
+                    .icon
+                        include ../img/icons/characteristics.svg
+                    h3 Характеристики
+                    .icon-open
+                        .icon
+                            include ../img/icons/align-down.svg
+                a(href="#tab").tabs__button
+                    .icon
+                        include ../img/icons/information.svg
+                    h3 Описание
+                    .icon-open
+                        .icon
+                            include ../img/icons/align-down.svg
+                a(href="#tab").tabs__button
+                    .icon
+                        include ../img/icons/speech-bubble.svg
+                    h3 Отзывы
+                    .icon-open
+                        .icon
+                            include ../img/icons/align-down.svg
+                .tabs__window.active
+                    .product-table
+                        .product-table__row
+                            .product-table__column
+                                h4 Ёмкость:
+                                p 55 A·ч
+                            a.red(href="catalog") показать аналогичные по ёмкости
+                        .product-table__row
+                            .product-table__column
+                                h4 Пусковой ток (А):
+                                p 450
+                        .product-table__row
+                            .product-table__column
+                                h4 Полярность:
+                                p Обратная
+                        .product-table__row
+                            .product-table__column
+                                h4 Номинальное напряжение (В):
+                                p 12
+                        .product-table__row
+                            .product-table__column
+                                h4 Производитель:
+                                p Spark
+                        .product-table__row
+                            .product-table__column
+                                h4 Габариты:
+                                p 242x175x190
+                            a.red(href="catalog") показать аналогичные по размерам
+                .tabs__window
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. A excepturi, harum iure laboriosam omnis rerum sint tempora velit? Harum, sit.
+                    br
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. A excepturi, harum iure laboriosam omnis rerum sint tempora velit? Harum, sit.
+                    br
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. A excepturi, harum iure laboriosam omnis rerum sint tempora velit? Harum, sit.
+                .tabs__window
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. A debitis fugiat fugit illo, maiores maxime odio placeat reiciendis repellat unde!
+                    br
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. A debitis fugiat fugit illo, maiores maxime odio placeat reiciendis repellat unde!
+                    br
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. A debitis fugiat fugit illo, maiores maxime odio placeat reiciendis repellat unde!
+
+    include includes/footer-faq
+    include includes/footer-benefit

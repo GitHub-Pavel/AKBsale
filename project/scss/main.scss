@@ -503,4 +503,244 @@
     display: flex !important;
     justify-content: center;
   }
-}
+}// popular-products
+
+// product
+.product {
+  .tabs {
+    margin-top: 60px;
+
+    @include sm(margin-top, 30px);
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-right: -30px;
+    @include lg(margin-left, 0px);
+    @include lg(margin-right, 0px);
+  }
+
+  &__sliders, &__description {
+    width: calc(100% / 12 * 6 - 60px);
+    margin-left: 30px;
+    margin-right: 30px;
+    @include lg(width, 100%);
+    @include lg(margin-left, 0px);
+    @include lg(margin-right, 0px);
+  }
+
+  &__sliders {
+    @include md(order, 1);
+  }
+
+  &__description {
+    @include md(order, 0);
+
+    .categories-side {
+      margin-bottom: 30px;
+      width: 100%;
+
+      &__row {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  h1 {
+    margin-bottom: 20px;
+
+    @include md(margin-bottom, 30px);
+  }
+
+  h5 {
+    margin-bottom: 20px;
+  }
+
+  & &-availability {
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+
+  & &-price {
+    @include sm(order, 0);
+
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__description {
+      width: 100%;
+      justify-content: flex-start;
+      margin-bottom: 30px;
+      margin-top: 20px;
+      @include sm(order, 1);
+      @include sm(margin-bottom, 20px);
+    }
+  }
+
+  & .cheaper {
+    @include sm(order, 2);
+    @include sm(margin-bottom, 30px);
+  }
+
+  & &__benefit {
+    margin: 0 -10px;
+    margin-bottom: 20px;
+    display: flex;
+
+    h5 {
+      margin: 0 10px;
+    }
+  }
+
+  & &__faq {
+    margin-top: 10px;
+    padding: 30px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: 1px solid $grey-light;
+
+    @include sm(padding, 20px 10px);
+
+    a {
+      margin: 10px 15px;
+      @include sm(margin, 10px 0px);
+      @include sm(font-size, 1.375rem);
+      .icon {
+        @include sm(width, 35px);
+      }
+    }
+  }
+
+  & &__buttons {
+    display: flex;
+    align-items: center;
+    float-wrap: wrap;
+    margin: 0 -15px;
+    margin-top: 10px;
+
+    a {
+      margin: 0 15px;
+      margin-top: 20px;
+    }
+
+    @media screen and (max-width: 780px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  & &__slider {
+    &_big {
+      .slick-arrow {
+        width: 16px;
+        height: 30px;
+      }
+
+      .slick-next {
+        right: 6px;
+      }
+
+      .slick-prev {
+        left: 6px;
+      }
+    }
+
+    &_small {
+      margin: 30px 25px 0;
+
+      @include lg(margin-bottom, 30px);
+
+      .slick-arrow {
+        width: 16px;
+        height: 30px;
+      }
+
+      .slick-next {
+        right: -15px;
+      }
+
+      .slick-prev {
+        left: -15px;
+      }
+
+      @include sm(margin, 8px -4px 30px);
+    }
+  }
+
+  & &__img {
+    padding: 30px;
+    border: 1px solid $grey;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  & &__thumb {
+    padding: 15px;
+    border: 1px solid $grey;
+    margin: 0 15px;
+
+    @include sm(margin, 0 4px);
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-table {
+    @include sm(margin, -10px);
+
+    &__column {
+      display: flex;
+      align-items: center;
+
+    }
+
+    a {
+      flex: 1 1 100px;
+      @include elg(font-size, 1.125rem);
+      @include md(margin-left, 10px);
+      @include md(width, 180px);
+      @include md(flex, none);
+      @include sm(font-size, .687rem);
+      @include sm(width, 100px);
+    }
+
+    &__row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 2px 0 8px;
+      border-bottom: .5px solid #E5E5E5;
+
+      @include lg(height, 83px);
+      @include md(justify-content, space-between);
+      @include sm(padding, 0 10px);
+      @include sm(height, 50px);
+
+      h4 {
+        width: 460px;
+        @include md(width, auto);
+        @include sm(font-size, 1rem);
+      }
+
+      p {
+        width: 230px;
+        @include lg(width, 225px);
+        @include md(width, auto);
+        @include md(margin-left, 5px);
+        @include sm(font-size, .875rem);
+      }
+    }
+  }
+}// product

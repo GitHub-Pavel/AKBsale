@@ -26,6 +26,11 @@ input, textarea, select {
   }
 }
 
+textarea {
+  width: 100%;
+  resize: none;
+}
+
 button {
   background: transparent;
   border: none;
@@ -117,7 +122,9 @@ button {
 
   .slider-range, .slider-range-min {
     width: 100%;
-    margin: 10px 0;
+    margin: 10px 0px;
+
+    @include sm(margin, 10px 0);
   }
 
   h4 {
