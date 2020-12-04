@@ -31,17 +31,13 @@ body {
 }
 
 // text
-p, strong, i {
-  font-size: 1.125rem;
+.text-red {
+  text-decoration: underline;
+  color: $red;
 }
 
-p {
-  display: inline;
-
-  a, span, i {
-    display: inline;
-    margin: 0 5px;
-  }
+p, strong, i {
+  font-size: 1.125rem;
 }
 
 a {
@@ -66,9 +62,7 @@ a {
     }
   }
 
-  &.red {
-    color: $red;
-    text-decoration: underline;
+  &.text-red{
 
     &:hover {
       text-decoration: none;
@@ -109,6 +103,13 @@ small {
     font-size: 1rem;
     color: $blue-text;
     display: inline;
+  }
+}
+
+p {
+  a, span, i {
+    display: inline;
+    margin: 0 5px;
   }
 }
 
