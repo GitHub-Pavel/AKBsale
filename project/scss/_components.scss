@@ -63,6 +63,7 @@
       border-bottom: 1px solid $grey-light;
       font-size: 1.125rem;
       color: $grey;
+      display: block;
       transition: color .3s ease-in-out;
 
       @include sm(font-size, 1rem);
