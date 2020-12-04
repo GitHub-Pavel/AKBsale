@@ -1,0 +1,58 @@
+extends common/layout
+
+block content
+    .container
+        .breadcrumbs
+            a(href="index.html") Главна
+            span /
+            p Контакты
+    section.section.contacts#contacts
+        .container
+            h1.text-center Контакты
+            .contacts__row
+                .contacts__data.contacts__data_information
+                    .list-information
+                        .list-information__icon
+                            .icon.red
+                                include ../img/icons/phone.svg
+                        .list-information__wrapper
+                            a(href="tel:+74951221470")
+                                p +7(495)122-14-70
+                            a(href="tel:+79038097049")
+                                p +7(903)809-70-49
+                    .list-information
+                        .list-information__icon
+                            .icon.red
+                                include ../img/icons/envelope.svg
+                        .list-information__wrapper
+                            a(href="mailto:info@mg77.ru")
+                                p info@mg77.ru
+                    .list-information
+                        .list-information__icon
+                            .icon.red
+                                include ../img/icons/marker.svg
+                        .list-information__wrapper
+                            p г. Москва, ул. 7-я Парковая, д.24А, офис 3
+                .contacts__data.contacts__data_order
+                    .box-order
+                        h4.red Обработка заказов
+                        h5 Режим работы:
+                            br
+                            | Ежедневно с 10:00 до 20:00
+                        p Заказы принятые после указанного времени обрабатываются на следующий рабочий день.
+                .contacts__data.contacts__data_order
+                    .box-order
+                        h4.red Обработка заказов
+                        p ООО «САНДРУС-М»
+                            br
+                            | ИНН 7719818165
+                            br
+                            | КПП 771901001
+                            br
+                            | ОГРН 1127746590553
+                        p Юридический адрес: 105264, г. Москва, ул. 7-я Парковая, д. 16
+                        p Пункт выдачи: г. Москва, ул. 7-я Парковая, д.24А, офис 3
+    section.map
+        .container
+            #map
+                script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A439381d4645117aafe37a250a6dd6753c527b4eb7c8e13cdb283ee24232b6842&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false")

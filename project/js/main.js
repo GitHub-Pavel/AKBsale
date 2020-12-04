@@ -1,4 +1,18 @@
 $(function () {
+    let bLazy = new Blazy()
+
+    $(window).resize(function (e) {
+        if ($(this).width() > 1315) {
+            $('.tabs').each(function() {
+                if (!($(this).find('.tabs__button').hasClass('active'))) {
+                    $($(this).find('.tabs__button')[0]).addClass('active')
+                    $($(this).find('.tabs__window')[0]).addClass('active')
+                    $($(this).find('.tabs__window')[0]).show()
+                }
+            })
+        }
+    })
+
     $(document).on('click', '#hamburger', function(e) {
         e.preventDefault()
         $('body').toggleClass('active-menu')
@@ -20,10 +34,11 @@ $(function () {
         })
     })
 
+    $('.categories-side.active .categories-side__row').show()
     $(document).on('click', '.categories-side__button', function(e) {
         e.preventDefault()
         $(this).parent().toggleClass('active')
-        if ($(this).parent().hasClass('active')) {
+        if (!($(this).parent().hasClass('active'))) {
             $(this).parent().find('.categories-side__row').hide("slow")
         } else {
             $(this).parent().find('.categories-side__row').show("slow")
@@ -98,6 +113,12 @@ $(function () {
             TabWindows = $(this).find('.tabs__window'),
             TabButtons = $(this).find('.tabs__button')
 
+        if ($(window).width() > 1315) {
+            $(TabWindows[0]).addClass('active')
+            $(TabButtons[0]).addClass('active')
+            $(TabWindows[0]).show()
+        }
+
         TabButtons.each(function(value) {
             let btnNum = value
 
@@ -109,11 +130,16 @@ $(function () {
                     TabWindows.removeClass('active')
                 }
 
-                if ($(window).width() < 1315) {
+                if ($(window).width() <= 1315) {
                     $(this).toggleClass('active')
                     TabWindows.each(function(value) {
                         if (btnNum === value) {
                             $(this).toggleClass('active')
+                            if ($(this).hasClass('active')) {
+                                $(this).show('slow')
+                            } else {
+                                $(this).hide('slow')
+                            }
                         }
                     })
                 } else {
@@ -121,6 +147,9 @@ $(function () {
                     TabWindows.each(function(value) {
                         if (btnNum === value) {
                             $(this).addClass('active')
+                            $(this).show()
+                        } else {
+                            $(this).hide()
                         }
                     })
                 }
@@ -138,23 +167,19 @@ $(function () {
                     $(this).next().val(+$(this).next().val()-1)
                 }
             }
-            changeBasket()
         })
 
         $(this).on('input', 'input', function() {
             $(this).val($(this).val().replace(/[A-Za-zА-Яа-яЁё]/, ''))
-
-            changeBasket()
         })
 
         $(this).on('blur', 'input', function() {
             if (+$(this).val() < +$(this).data('min')) {
                 $(this).val($(this).data('min'))
             }
-
-            changeBasket()
         })
     })
+
 
     // Sliders
 
@@ -235,17 +260,4 @@ $(function () {
             }
         ]
     })
-
-    changeBasket()
 })
-$('.categories-side.active').find('.categories-side__row').hide("slow")
-
-function changeBasket() {
-    let allProducts = 0
-
-    $('.basket-products__product').each(function() {
-        allProducts += +$(this).find('input').val()
-    })
-
-    $('.basket-products__bottom .basket-products__count h4').text(allProducts+' шт.')
-}

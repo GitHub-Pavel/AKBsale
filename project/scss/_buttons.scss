@@ -31,6 +31,13 @@ textarea {
   resize: none;
 }
 
+::placeholder {
+  font-size: 1.125rem;
+  color: $grey;
+}
+
+
+// buttons
 button {
   background: transparent;
   border: none;
@@ -61,7 +68,7 @@ button {
   }
 }
 
-// size
+// btn size
 .btn-primary {
   padding: 18px 19px;
 
@@ -78,7 +85,7 @@ button {
   padding: 15px 14px;
 }
 
-// color
+// btn color
 .btn-black {
   background: $black;
   border-color: $black;
@@ -145,9 +152,9 @@ button {
 
   .slider-range, .slider-range-min {
     width: 100%;
-    margin: 10px 0px;
+    margin: 17px 0px 3px;
 
-    @include sm(margin, 10px 0);
+    @include sm(margin, 17px 0px 3px);
   }
 
   h4 {

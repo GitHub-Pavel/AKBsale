@@ -250,211 +250,83 @@
     </header>
     <div class="container">
       <div class="breadcrumbs"><a href="index.html">Главна</a><span>/</span>
-        <p>Корзина</p>
+        <p>Контакты</p>
       </div>
     </div>
-    <section class="section basket" id="basket">
+    <section class="section contacts" id="contacts">
       <div class="container">
-        <h1 class="text-center">Корзина</h1>
-        <div class="basket-products">
-          <div class="basket-products__top">
-            <div class="basket-products__name">
-              <h3>Наименование</h3>
-            </div>
-            <div class="basket-products__capacity">
-              <h4>Ёмкость</h4>
-            </div>
-            <div class="basket-products__count">
-              <h4>Количество</h4>
-            </div>
-            <div class="basket-products__price">
-              <h4>Цена</h4>
-            </div>
-            <div class="basket-products__button"></div>
-          </div>
-          <div class="basket-products__middle">
-            <div class="basket-products__product">
-              <div class="basket-products__name">
-                <div class="basket-products__img-wrapper"><img src="./img/product.png" alt="product"></div>
-                <h5>Аккумулятор Spark 55 Ач 450A обр. пол.</h5>
-              </div>
-              <div class="basket-products__capacity">
-                <h4>Ёмкость</h4>
-                <h5>55 А·ч</h5>
-              </div>
-              <div class="basket-products__count">
-                <h4>Количество</h4>
-                <div class="input-plus"><a class="input-plus__button input-plus__button_minus" href="#minus">-</a>
-                  <input type="text" value="1" data-min="1"><a class="input-plus__button input-plus__button_plus" href="#plus">+</a>
-                </div>
-              </div>
-              <div class="basket-products__price">
-                <h4>Цена</h4>
-                <h5>2 600 руб.</h5>
-              </div>
-              <div class="basket-products__button"><a class="black" href="#delete">
-                  <div class="icon"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M30 3.02143L26.9786 0L15 11.9786L3.02143 0L0 3.02143L11.9786 15L0 26.9786L3.02143 30L15 18.0214L26.9786 30L30 26.9786L18.0214 15L30 3.02143Z" fill="white"/>
+        <h1 class="text-center">Контакты</h1>
+        <div class="contacts__row">
+          <div class="contacts__data contacts__data_information">
+            <div class="list-information">
+              <div class="list-information__icon">
+                <div class="icon red"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M31.6128 24.7784C30.7939 23.9257 29.8062 23.4698 28.7593 23.4698C27.7209 23.4698 26.7247 23.9173 25.8721 24.7699L23.2043 27.4292C22.9848 27.3111 22.7653 27.2013 22.5543 27.0916C22.2503 26.9396 21.9633 26.7961 21.7185 26.6441C19.2196 25.057 16.9486 22.9886 14.7705 20.3124C13.7152 18.9785 13.006 17.8557 12.4911 16.716C13.1833 16.0828 13.8249 15.4243 14.4497 14.7912C14.6861 14.5548 14.9224 14.3099 15.1588 14.0736C16.9317 12.3007 16.9317 10.0044 15.1588 8.23151L12.8541 5.92677C12.5924 5.66506 12.3222 5.39491 12.0689 5.12475C11.5624 4.60133 11.0305 4.06103 10.4818 3.55449C9.6629 2.74403 8.6836 2.31348 7.65364 2.31348C6.62368 2.31348 5.62749 2.74403 4.78327 3.55449C4.77482 3.56293 4.77482 3.56293 4.76638 3.57138L1.89601 6.46708C0.815398 7.54769 0.199112 8.86468 0.0640356 10.3927C-0.138579 12.8579 0.587456 15.1542 1.14465 16.6569C2.51229 20.3462 4.55533 23.7653 7.60299 27.4292C11.3007 31.8446 15.7498 35.3312 20.832 37.7879C22.7738 38.7081 25.3655 39.7972 28.2612 39.9829C28.4385 39.9913 28.6242 39.9998 28.7931 39.9998C30.7433 39.9998 32.3811 39.2991 33.6643 37.9061C33.6727 37.8892 33.6896 37.8808 33.6981 37.8639C34.1371 37.332 34.6436 36.8508 35.1754 36.3358C35.5385 35.9897 35.9099 35.6267 36.2729 35.2468C37.1087 34.3772 37.5477 33.3642 37.5477 32.3258C37.5477 31.2789 37.1003 30.2743 36.2476 29.4301L31.6128 24.7784ZM34.6351 33.6681C34.6267 33.6681 34.6267 33.6765 34.6351 33.6681C34.3059 34.0227 33.9682 34.3435 33.6052 34.698C33.0564 35.2215 32.4992 35.7702 31.9758 36.3865C31.1232 37.2983 30.1185 37.7288 28.8015 37.7288C28.6749 37.7288 28.5398 37.7288 28.4132 37.7204C25.9058 37.56 23.5758 36.5807 21.8282 35.7449C17.0499 33.4317 12.8541 30.1477 9.36742 25.9856C6.48861 22.5158 4.56377 19.3078 3.28898 15.8633C2.50385 13.7612 2.21682 12.1234 2.34345 10.5785C2.42787 9.59072 2.80777 8.77182 3.50848 8.07111L6.3873 5.19229C6.80097 4.80395 7.23997 4.59289 7.67052 4.59289C8.20239 4.59289 8.63294 4.9137 8.9031 5.18385C8.91154 5.19229 8.91998 5.20073 8.92842 5.20918C9.4434 5.69039 9.93305 6.18848 10.448 6.72034C10.7097 6.9905 10.9799 7.26065 11.25 7.53924L13.5548 9.84399C14.4497 10.7389 14.4497 11.5662 13.5548 12.4611C13.31 12.7059 13.0736 12.9507 12.8288 13.1871C12.1196 13.9132 11.4442 14.5885 10.7097 15.247C10.6929 15.2639 10.676 15.2724 10.6675 15.2893C9.94149 16.0153 10.0766 16.7244 10.2285 17.2056C10.237 17.231 10.2454 17.2563 10.2539 17.2816C10.8533 18.7337 11.6975 20.1013 12.9807 21.7307L12.9892 21.7392C15.3192 24.6095 17.7759 26.8467 20.4859 28.5605C20.832 28.78 21.1866 28.9573 21.5243 29.1261C21.8282 29.2781 22.1153 29.4216 22.3601 29.5736C22.3938 29.5905 22.4276 29.6158 22.4614 29.6327C22.7484 29.7762 23.0186 29.8437 23.2972 29.8437C23.9979 29.8437 24.4369 29.4047 24.5804 29.2612L27.4677 26.374C27.7547 26.0869 28.2106 25.7408 28.7424 25.7408C29.2659 25.7408 29.6964 26.07 29.9581 26.3571C29.9666 26.3655 29.9666 26.3655 29.975 26.374L34.6267 31.0257C35.4963 31.8868 35.4963 32.7732 34.6351 33.6681Z" fill="black"/>
+<path d="M21.6168 9.51481C23.8287 9.88627 25.838 10.9331 27.442 12.5371C29.0461 14.1412 30.0845 16.1504 30.4644 18.3623C30.5572 18.9195 31.0384 19.3078 31.5872 19.3078C31.6547 19.3078 31.7138 19.2994 31.7814 19.291C32.4061 19.1897 32.8198 18.5987 32.7184 17.974C32.2626 15.2978 30.9962 12.858 29.0629 10.9247C27.1297 8.99139 24.6898 7.72505 22.0136 7.26916C21.3889 7.16786 20.8064 7.58153 20.6966 8.19781C20.5869 8.8141 20.9921 9.4135 21.6168 9.51481Z" fill="black"/>
+<path d="M39.9532 17.6448C39.2019 13.238 37.1251 9.2279 33.9339 6.03672C30.7427 2.84554 26.7326 0.768738 22.3258 0.0173754C21.7095 -0.0923741 21.127 0.32974 21.0172 0.946026C20.9159 1.57075 21.3296 2.15327 21.9543 2.26302C25.8884 2.92996 29.4764 4.7957 32.3299 7.64075C35.1833 10.4942 37.0406 14.0822 37.7076 18.0163C37.8004 18.5735 38.2817 18.9618 38.8304 18.9618C38.8979 18.9618 38.957 18.9534 39.0246 18.945C39.6409 18.8521 40.063 18.2611 39.9532 17.6448Z" fill="black"/>
 </svg>
 
-                  </div></a></div>
-            </div>
-            <div class="basket-products__product">
-              <div class="basket-products__name">
-                <div class="basket-products__img-wrapper"><img src="./img/product.png" alt="product"></div>
-                <h5>Аккумулятор Spark 55 Ач 450A обр. пол.</h5>
-              </div>
-              <div class="basket-products__capacity">
-                <h4>Ёмкость</h4>
-                <h5>55 А·ч</h5>
-              </div>
-              <div class="basket-products__count">
-                <h4>Количество</h4>
-                <div class="input-plus"><a class="input-plus__button input-plus__button_minus" href="#minus">-</a>
-                  <input type="text" value="1" data-min="1"><a class="input-plus__button input-plus__button_plus" href="#plus">+</a>
                 </div>
               </div>
-              <div class="basket-products__price">
-                <h4>Цена</h4>
-                <h5>2 600 руб.</h5>
-              </div>
-              <div class="basket-products__button"><a class="black" href="#delete">
-                  <div class="icon"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M30 3.02143L26.9786 0L15 11.9786L3.02143 0L0 3.02143L11.9786 15L0 26.9786L3.02143 30L15 18.0214L26.9786 30L30 26.9786L18.0214 15L30 3.02143Z" fill="white"/>
+              <div class="list-information__wrapper"><a href="tel:+74951221470">
+                  <p>+7(495)122-14-70</p></a><a href="tel:+79038097049">
+                  <p>+7(903)809-70-49</p></a></div>
+            </div>
+            <div class="list-information">
+              <div class="list-information__icon">
+                <div class="icon red"><svg viewBox="0 0 47 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M41.2623 0H5.74736C2.57707 0 0 2.3056 0 5.14193V26.8581C0 29.6944 2.57707 32 5.74736 32H41.2526C44.4229 32 47 29.6944 47 26.8581V5.15063C47.0097 2.3143 44.4326 0 41.2623 0ZM44.384 26.8581C44.384 28.398 42.9836 29.6509 41.2623 29.6509H5.74736C4.02607 29.6509 2.6257 28.398 2.6257 26.8581V5.15063C2.6257 3.61066 4.02607 2.3578 5.74736 2.3578H41.2526C42.9739 2.3578 44.3743 3.61066 44.3743 5.15063V26.8581H44.384Z" fill="black"/>
+<path d="M29.6413 15.7305L41.136 6.50812C41.6708 6.0731 41.7195 5.33357 41.2332 4.84634C40.747 4.36782 39.9204 4.32432 39.3758 4.75934L23.5244 17.488L20.4319 15.0171C20.4222 15.0084 20.4124 14.9997 20.4124 14.991C20.3444 14.9301 20.2763 14.8779 20.1985 14.8257L7.61459 4.75064C7.07 4.31562 6.24339 4.35912 5.75715 4.84634C5.27091 5.33357 5.31953 6.0731 5.86412 6.50812L17.495 15.8088L5.91275 25.5098C5.38761 25.9535 5.35843 26.693 5.8544 27.1715C6.11697 27.4151 6.46706 27.5456 6.81715 27.5456C7.13807 27.5456 7.45899 27.4412 7.71183 27.2324L19.4691 17.3923L22.6589 19.9415C22.9117 20.1416 23.2229 20.2373 23.5341 20.2373C23.8453 20.2373 24.1662 20.1329 24.4093 19.9328L27.6866 17.3053L39.3758 27.2411C39.6286 27.4586 39.9593 27.563 40.2802 27.563C40.6303 27.563 40.9707 27.4412 41.2332 27.1976C41.7292 26.7278 41.7097 25.9796 41.1846 25.5359L29.6413 15.7305Z" fill="black"/>
 </svg>
 
-                  </div></a></div>
+                </div>
+              </div>
+              <div class="list-information__wrapper"><a href="mailto:info@mg77.ru">
+                  <p>info@mg77.ru</p></a></div>
+            </div>
+            <div class="list-information">
+              <div class="list-information__icon">
+                <div class="icon red"><svg viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<path d="M26.6778 26.6614C30.9343 19.9823 30.3992 20.8156 30.5219 20.6414C32.0716 18.4556 32.8906 15.8831 32.8906 13.2017C32.8906 6.09072 27.1202 0.23291 20 0.23291C12.903 0.23291 7.10938 6.07916 7.10938 13.2017C7.10938 15.8813 7.94563 18.5213 9.54609 20.7365L13.322 26.6615C9.28492 27.2819 2.42188 29.1307 2.42188 33.2017C2.42188 34.6856 3.39047 36.8005 8.00484 38.4485C11.2269 39.5992 15.4868 40.2329 20 40.2329C28.4395 40.2329 37.5781 37.8523 37.5781 33.2017C37.5781 29.13 30.7231 27.2831 26.6778 26.6614ZM11.5038 19.4474C11.4909 19.4272 11.4775 19.4075 11.4634 19.3881C10.1316 17.556 9.45312 15.3846 9.45312 13.2017C9.45312 7.34088 14.1723 2.57666 20 2.57666C25.8155 2.57666 30.5469 7.34299 30.5469 13.2017C30.5469 15.3881 29.8812 17.4858 28.6214 19.2697C28.5085 19.4186 29.0975 18.5036 20 32.7789L11.5038 19.4474ZM20 37.8892C10.7817 37.8892 4.76562 35.1796 4.76562 33.2017C4.76562 31.8723 7.85687 29.6864 14.7069 28.8344L19.0117 35.5893C19.2269 35.927 19.5995 36.1313 19.9999 36.1313C20.4003 36.1313 20.773 35.9269 20.9881 35.5893L25.2929 28.8344C32.143 29.6864 35.2344 31.8723 35.2344 33.2017C35.2344 35.1628 29.2724 37.8892 20 37.8892Z" fill="white"/>
+<path d="M20 7.34229C16.7691 7.34229 14.1406 9.9708 14.1406 13.2017C14.1406 16.4325 16.7691 19.061 20 19.061C23.2309 19.061 25.8594 16.4325 25.8594 13.2017C25.8594 9.9708 23.2309 7.34229 20 7.34229ZM20 16.7173C18.0615 16.7173 16.4844 15.1402 16.4844 13.2017C16.4844 11.2631 18.0615 9.68604 20 9.68604C21.9385 9.68604 23.5156 11.2631 23.5156 13.2017C23.5156 15.1402 21.9385 16.7173 20 16.7173Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="40" height="40" fill="white" transform="translate(0 0.23291)"/>
+</clipPath>
+</defs>
+</svg>
+
+                </div>
+              </div>
+              <div class="list-information__wrapper">
+                <p>г. Москва, ул. 7-я Парковая, д.24А, офис 3</p>
+              </div>
             </div>
           </div>
-          <div class="basket-products__bottom">
-            <div class="basket-products__name">
-              <h3>итого:</h3>
+          <div class="contacts__data contacts__data_order">
+            <div class="box-order">
+              <h4 class="red">Обработка заказов</h4>
+              <h5>Режим работы:<br>Ежедневно с 10:00 до 20:00</h5>
+              <p>Заказы принятые после указанного времени обрабатываются на следующий рабочий день.</p>
             </div>
-            <div class="basket-products__capacity">
-              <h4>55 А·ч</h4>
+          </div>
+          <div class="contacts__data contacts__data_order">
+            <div class="box-order">
+              <h4 class="red">Обработка заказов</h4>
+              <p>ООО «САНДРУС-М»<br>ИНН 7719818165<br>КПП 771901001<br>ОГРН 1127746590553</p>
+              <p>Юридический адрес: 105264, г. Москва, ул. 7-я Парковая, д. 16</p>
+              <p>Пункт выдачи: г. Москва, ул. 7-я Парковая, д.24А, офис 3</p>
             </div>
-            <div class="basket-products__count">
-              <h4>1 шт.</h4>
-            </div>
-            <div class="basket-products__price">
-              <h4>2 600 руб.</h4>
-            </div>
-            <div class="basket-products__button"><a class="btn btn-small btn-burgundy" href="#delete-all">УДАЛИТЬ всё</a></div>
           </div>
         </div>
       </div>
     </section>
-    <section class="section basket-form" id="basket-form">
+    <section class="map">
       <div class="container">
-        <div class="basket-form__double-wrapper">
-          <div class="basket-form__double">
-            <h2>Данные получателя:</h2>
-            <label class="input-wrapper">
-              <p>Получатель*</p>
-              <div class="input-wrapper__inputs">
-                <input type="text" name="name" placeholder="Получатель*" required>
-              </div>
-            </label>
-            <label class="input-wrapper">
-              <p>Телефон*</p>
-              <div class="input-wrapper__inputs">
-                <input type="tel" name="tel" placeholder="Телефон*" required>
-              </div>
-            </label>
-            <label class="input-wrapper">
-              <p>Комментарий</p>
-              <div class="input-wrapper__inputs">
-                <textarea placeholder="Комментарий" name="message" rows="4"></textarea>
-              </div>
-            </label>
-          </div>
-          <div class="basket-form__double">
-            <h2>Адрес доставки:</h2>
-            <label class="input-wrapper">
-              <p>Город</p>
-              <div class="input-wrapper__inputs">
-                <input type="text" name="city" placeholder="Город">
-              </div>
-            </label>
-            <label class="input-wrapper">
-              <p>Улица</p>
-              <div class="input-wrapper__inputs">
-                <input type="text" name="street" placeholder="Улица">
-                <div class="input-wrapper__additionally">
-                  <input type="text" name="home" placeholder="Дом"><span>/</span>
-                  <input type="text" name="hometown" placeholder="Квартира">
-                </div>
-              </div>
-            </label>
-          </div>
-        </div>
-        <div class="basket-form__triple-wrapper">
-          <div class="basket-form__triple">
-            <h3>Варианты доставки:</h3>
-            <label class="radio-wrapper">
-              <input type="radio" name="payment" value="pickup" required>
-              <div class="box"></div>
-              <p>Самовывоз м. Первомайская, 7-я Парковая 24А</p>
-            </label>
-            <label class="radio-wrapper">
-              <input type="radio" name="payment" value="moscow" required>
-              <div class="box"></div>
-              <p>Доставка по Москве и МО</p>
-            </label>
-            <label class="radio-wrapper">
-              <input type="radio" name="payment" value="tk_rf" required>
-              <div class="box"></div>
-              <p>Отправка ТК по РФ</p>
-            </label>
-          </div>
-          <div class="basket-form__triple">
-            <h3>Способы оплаты:</h3>
-            <label class="radio-wrapper">
-              <input type="radio" name="delivery" value="cash" required>
-              <div class="box"></div>
-              <p>Оплата наличными при получении</p>
-            </label>
-            <label class="radio-wrapper">
-              <input type="radio" name="delivery" value="card" required>
-              <div class="box"></div>
-              <p>Оплата картой</p>
-            </label>
-            <label class="radio-wrapper">
-              <input type="radio" name="delivery" value="bank" required>
-              <div class="box"></div>
-              <p>Счет на юр. лицо</p>
-            </label>
-          </div>
-          <div class="basket-form__triple">
-            <h4>Дополнительные услуги</h4>
-            <label class="radio-wrapper">
-              <input type="checkbox" name="dop-one" value="setup">
-              <div class="box"></div>
-              <p>Интересует установка аккумулятора</p>
-            </label>
-            <label class="radio-wrapper">
-              <input type="checkbox" name="dop-one" value="discount">
-              <div class="box"></div>
-              <p>Получить скидку за сдачу старого аккумулятора</p>
-            </label>
-          </div>
-        </div>
-        <div class="basket-form__submit">
-          <div class="basket-form__result">
-            <div class="basket-form__description">
-              <h4>Скидка за утилизацию:</h4>
-              <h5>0 руб.</h5>
-            </div>
-            <div class="basket-form__description">
-              <h4>Итого:</h4>
-              <h5>2 600 руб.</h5>
-            </div>
-            <div class="basket-form__description">
-              <h4>Итого, со скидкой:</h4>
-              <h5>2 600 руб.</h5>
-            </div>
-          </div>
-          <button class="btn btn-red btn-small" type="submit">оформить заказ</button>
+        <div id="map">
+          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A439381d4645117aafe37a250a6dd6753c527b4eb7c8e13cdb283ee24232b6842&amp;amp;width=100%25&amp;amp;height=100%&amp;amp;lang=ru_RU&amp;amp;scroll=false"></script>
         </div>
       </div>
     </section>

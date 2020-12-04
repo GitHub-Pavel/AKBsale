@@ -1,0 +1,194 @@
+extends common/layout
+
+block content
+    .container
+        .breadcrumbs
+            a(href="index.html") Главна
+            span /
+            p Доставка
+    section.section.delivery#delivery
+        .container
+            h1 Доставка по Москве и Московской области
+            .row-big
+                .content
+                    p После оформления заказа менеджер свяжется с Вами по телефону для согласования суммы заказа, дня, времени и адреса доставки.
+                    ul.red-list
+                        li
+                            h5 Доставка СЕГОДНЯ  по Москве  Московской области.
+                        li
+                            h5 Доставка товара осуществляется 24/7.
+                        li
+                            h5 Доставка осуществляется в день заказа.
+                                br
+                                | “Экспресс”, “Ночная” или “Доставка на следующий день”
+                                br
+                                | осуществляется в удобное для Вас время.
+                    .black-box
+                        h4 Отправка в регионы осуществляется по полной предоплате за аккумулятор. Отправка производится любой транспортной компанией.
+                    .box-order.d-none.d-sm-flex
+                        h4.red Обработка заказов
+                        h5 Режим работы:
+                            br
+                            | Ежедневно с 10:00 до 20:00
+                        p Заказы принятые после указанного времени обрабатываются на следующий рабочий день.
+                    .box-order.d-none.d-sm-flex
+                        h4.uppercase ПРИ СДАЧЕ СТАРОГО АККУМУЛЯТОРА, ПРОСЬБА, СНЯТЬ ЕГО ДО ПРИЕЗДА КУРЬЕРА
+                        p Аккумуляторы, имеющие течь электролита, при доставке принимаются по усмотрению курьера.
+                .sidebar.d-sm-none
+                    .box-order
+                        h4.red Обработка заказов
+                        h5 Режим работы:
+                            br
+                            | Ежедневно с 10:00 до 20:00
+                        p Заказы принятые после указанного времени обрабатываются на следующий рабочий день.
+                    .box-order
+                        h4.uppercase ПРИ СДАЧЕ СТАРОГО АККУМУЛЯТОРА, ПРОСЬБА, СНЯТЬ ЕГО ДО ПРИЕЗДА КУРЬЕРА
+                        p Аккумуляторы, имеющие течь электролита, при доставке принимаются по усмотрению курьера.
+            .row.justify-center
+                .delivery-table
+                    .delivery-table__column
+                        .delivery-table__title
+                            h4 Тип доставки
+                        .delivery-table__row
+                            h5 Курьером По Москве и МО
+                        .delivery-table__row
+                            h5 Отправка в регионы любой ТК (По предоплате)
+                        .delivery-table__row
+                            h5 Самовывоз
+                    .delivery-table__column
+                        .delivery-table__title
+                            h4 Время доставки
+                        .delivery-table__row
+                            h5 Сегодня
+                        .delivery-table__row
+                            h5 Сегодня
+                        .delivery-table__row
+                            h5 Ежедневно с 10:00 до 20:00
+                    .delivery-table__column
+                        .delivery-table__title
+                            h4 В пределах МКАД
+                        .delivery-table__row
+                            h5 350р в пределах МКАД
+                        .delivery-table__row
+                            h5 По тарифам ТК (доставка до ТК бесплатно)
+                        .delivery-table__row
+                            h5 м. Первомайская, 7-я Парковая 24А
+                    .delivery-table__column
+                        .delivery-table__title
+                            h4 За пределами МКАД
+                        .delivery-table__row
+                            h5 +30 р./км от МКАД (по данным Яндекс.Карт)
+                        .delivery-table__row
+                        .delivery-table__row
+                .payment__item.payment__item_delivery
+                    a(href="payment.html").payment__content
+                        img.b-lazy(src="https://via.placeholder.com/120/FFFFFF/FFFFFF?Text=" data-src="./img/delivery-man.png")
+                        h4 Доставка до подъезда, шлагбаума, КПП
+                        p Бесплатный самовывоз с нашего склада, расположенного по адресу: г. Москва, ул. 7-я Парковая, д. 24A, офис 3
+                    .payment__box
+                        .payment__squad.payment__squad_one
+                        .payment__squad.payment__squad_two
+                        .payment__squad.payment__squad_three
+                        .payment__squad.payment__squad_four
+                        a(href="payment.html")
+                            span Подробнее
+                .payment__item.payment__item_delivery
+                    a(href="payment.html").payment__content
+                        img.b-lazy(src="https://via.placeholder.com/120/FFFFFF/FFFFFF?Text=" data-src="./img/time-passing.png")
+                        h4 Время ожидания куръера, не более 20 минут
+                        p Мы предварительно позвоним за 30-60 минут
+                    .payment__box
+                        .payment__squad.payment__squad_one
+                        .payment__squad.payment__squad_two
+                        .payment__squad.payment__squad_three
+                        .payment__squad.payment__squad_four
+                        a(href="payment.html")
+                            span Подробнее
+                .payment__item.payment__item_delivery
+                    a(href="payment.html").payment__content
+                        img.b-lazy(src="https://via.placeholder.com/120/FFFFFF/FFFFFF?Text=" data-src="./img/delivery-door.png")
+                        h4 Подъем до квартиры/ офиса оплачиваеться дополнительно
+                        p Условия доставки заказа, общий вес которого превышает 100 килограммов, определяется индивидуально и требует предварительного согласования.
+                    .payment__box
+                        .payment__squad.payment__squad_one
+                        .payment__squad.payment__squad_two
+                        .payment__squad.payment__squad_three
+                        .payment__squad.payment__squad_four
+                        a(href="payment.html")
+                            span Подробнее
+                .payment__item.payment__item_delivery
+                    a(href="payment.html").payment__content
+                        img.b-lazy(src="https://via.placeholder.com/120/FFFFFF/FFFFFF?Text=" data-src="./img/delivery-box.png")
+                        h4 Самовывоз в Москве
+                        p Бесплатный самовывоз с нашего склада, расположенного по адресу: г. Москва, ул. 7-я Парковая, д. 24A, офис 3
+                    .payment__box
+                        .payment__squad.payment__squad_one
+                        .payment__squad.payment__squad_two
+                        .payment__squad.payment__squad_three
+                        .payment__squad.payment__squad_four
+                        a(href="payment.html")
+                            span Подробнее
+                .payment__item.payment__item_delivery
+                    a(href="payment.html").payment__content
+                        img.b-lazy(src="https://via.placeholder.com/120/FFFFFF/FFFFFF?Text=" data-src="./img/map.png")
+                        h4 Доставка по России
+                        p Доставка по России возможна через Транспортную компанию ПЭК.
+                    .payment__box
+                        .payment__squad.payment__squad_one
+                        .payment__squad.payment__squad_two
+                        .payment__squad.payment__squad_three
+                        .payment__squad.payment__squad_four
+                        a(href="payment.html")
+                            span Подробнее
+                .payment__item.payment__item_delivery
+                    a(href="payment.html").payment__content
+                        img.b-lazy(src="https://via.placeholder.com/120/FFFFFF/FFFFFF?Text=" data-src="./img/weight.png")
+                        h4 Стоимость доставки заказа весом свыше 100 кг
+                        p Условия доставки заказа, общий вес которого превышает 100 килограммов, определяется индивидуально и требует предварительного согласования.
+                    .payment__box
+                        .payment__squad.payment__squad_one
+                        .payment__squad.payment__squad_two
+                        .payment__squad.payment__squad_three
+                        .payment__squad.payment__squad_four
+                        a(href="payment.html")
+                            span Подробнее
+    section.section.payment#payment
+        .container
+            h2 Оплата
+            .row.justify-center
+                .payment__item
+                    a(href="payment.html").payment__content
+                        img.b-lazy(src="https://via.placeholder.com/120/FFFFFF/FFFFFF?Text=" data-src="./img/cash.png")
+                        h3 Наличными
+                        p При самовывозе и доставке
+                    .payment__box
+                        .payment__squad.payment__squad_one
+                        .payment__squad.payment__squad_two
+                        .payment__squad.payment__squad_three
+                        .payment__squad.payment__squad_four
+                        a(href="payment.html")
+                            span Подробнее
+                .payment__item
+                    a(href="payment.html").payment__content
+                        img.b-lazy(src="https://via.placeholder.com/120/FFFFFF/FFFFFF?Text=" data-src="./img/credit-card.png")
+                        h3 Банковской картой
+                        p При самовывозе
+                    .payment__box
+                        .payment__squad.payment__squad_one
+                        .payment__squad.payment__squad_two
+                        .payment__squad.payment__squad_three
+                        .payment__squad.payment__squad_four
+                        a(href="payment.html")
+                            span Подробнее
+                .payment__item
+                    a(href="payment.html").payment__content
+                        img.b-lazy(src="https://via.placeholder.com/120/FFFFFF/FFFFFF?Text=" data-src="./img/invoices.png")
+                        h3 Безналичный расчет
+                        p Юридические лица либо при доставке через Транспортную компанию
+                    .payment__box
+                        .payment__squad.payment__squad_one
+                        .payment__squad.payment__squad_two
+                        .payment__squad.payment__squad_three
+                        .payment__squad.payment__squad_four
+                        a(href="payment.html")
+                            span Подробнее
