@@ -690,6 +690,7 @@
 
     p {
       margin-top: 8px;
+      display: block;
     }
   }
 
@@ -1359,11 +1360,11 @@
   &__window {
     width: 100% !important;
     border: 1px solid $grey-light;
-    padding-right: 30px !important;
+    padding: 30px !important;
     display: none;
     flex-direction: column;
 
-    @include sm(padding-right, 10px !important);
+    @include sm(padding, 10px !important);
   }
 
   @media screen and (max-width: 1315px) {
