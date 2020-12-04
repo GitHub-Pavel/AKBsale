@@ -352,13 +352,19 @@
             <label class="input-wrapper">
               <p>Получатель*</p>
               <div class="input-wrapper__inputs">
-                <input type="text" name="name" placeholder="Получатель*" required>
+                <div class="error-wrapper">
+                  <input class="error" type="text" name="name" placeholder="Получатель*" required>
+                  <div class="error-text"><small>*Неправильное имя</small></div>
+                </div>
               </div>
             </label>
             <label class="input-wrapper">
               <p>Телефон*</p>
               <div class="input-wrapper__inputs">
-                <input type="tel" name="tel" placeholder="Телефон*" required>
+                <div class="error-wrapper">
+                  <input type="tel" name="tel" placeholder="Телефон*" required>
+                  <div class="error-text"><small>*Неправильное имя</small></div>
+                </div>
               </div>
             </label>
             <label class="input-wrapper">
@@ -392,17 +398,17 @@
           <div class="basket-form__triple">
             <h3>Варианты доставки:</h3>
             <label class="radio-wrapper">
-              <input type="radio" name="payment" value="pickup" required>
+              <input class="error" type="radio" name="payment" value="pickup" required>
               <div class="box"></div>
               <p>Самовывоз м. Первомайская, 7-я Парковая 24А</p>
             </label>
             <label class="radio-wrapper">
-              <input type="radio" name="payment" value="moscow" required>
+              <input class="error" type="radio" name="payment" value="moscow" required>
               <div class="box"></div>
               <p>Доставка по Москве и МО</p>
             </label>
             <label class="radio-wrapper">
-              <input type="radio" name="payment" value="tk_rf" required>
+              <input class="error" type="radio" name="payment" value="tk_rf" required>
               <div class="box"></div>
               <p>Отправка ТК по РФ</p>
             </label>
@@ -558,13 +564,19 @@
         <label class="input-wrapper">
           <p> Имя</p>
           <div class="input-wrapper__inputs">
-            <input type="text" name="name" placeholder="Введите ваше имя" required>
+            <div class="error-wrapper">
+              <input class="error" type="text" name="name" placeholder="Введите ваше имя" required>
+              <div class="error-text"><small>*Неправильное имя</small></div>
+            </div>
           </div>
         </label>
         <label class="input-wrapper">
           <p> Телефон</p>
           <div class="input-wrapper__inputs">
-            <input type="tel" name="tel" placeholder="Введите ваш телефон" required>
+            <div class="error-wrapper">
+              <input type="tel" name="tel" placeholder="Введите ваш телефон" required>
+              <div class="error-text"><small>*Неправильное имя</small></div>
+            </div>
           </div>
         </label>
         <div class="descripton"><small>Нажимаю на кнопку, вы даете согласие на<a href="policy">обработку персональных данных</a></small></div>
@@ -580,25 +592,37 @@
         <label class="input-wrapper">
           <p> Имя</p>
           <div class="input-wrapper__inputs">
-            <input type="text" name="name" placeholder="Введите ваше имя" required>
+            <div class="error-wrapper">
+              <input class="error" type="text" name="name" placeholder="Введите ваше имя" required>
+              <div class="error-text"><small>*Неправильное имя</small></div>
+            </div>
           </div>
         </label>
         <label class="input-wrapper">
           <p> Телефон</p>
           <div class="input-wrapper__inputs">
-            <input type="tel" name="tel" placeholder="Введите ваш телефон" required>
+            <div class="error-wrapper">
+              <input type="tel" name="tel" placeholder="Введите ваш телефон" required>
+              <div class="error-text"><small>*Неправильное имя</small></div>
+            </div>
           </div>
         </label>
         <label class="input-wrapper">
           <p> Ссылка на товар</p>
           <div class="input-wrapper__inputs">
-            <input type="text" name="link_to_product" placeholder="Введите ссылку на товар" required>
+            <div class="error-wrapper">
+              <input type="text" name="link_to_product" placeholder="Введите ссылку на товар" required>
+              <div class="error-text"><small>*Неправильное имя</small></div>
+            </div>
           </div>
         </label>
         <label class="input-wrapper">
           <p> Комментарий</p>
           <div class="input-wrapper__inputs">
-            <textarea placeholder="Введите текст сообщения" name="message" rows="4"></textarea>
+            <div class="error-wrapper">
+              <textarea placeholder="Введите текст сообщения" name="message" rows="4"></textarea>
+              <div class="error-text"><small>*Неправильное имя</small></div>
+            </div>
           </div>
         </label>
         <div class="descripton"><small>Нажимаю на кнопку, вы даете согласие на<a href="policy">обработку персональных данных</a></small></div>
@@ -613,19 +637,28 @@
         <label class="input-wrapper">
           <p> Имя</p>
           <div class="input-wrapper__inputs">
-            <input type="text" name="name" placeholder="Введите ваше имя" required>
+            <div class="error-wrapper">
+              <input class="error" type="text" name="name" placeholder="Введите ваше имя" required>
+              <div class="error-text"><small>*Неправильное имя</small></div>
+            </div>
           </div>
         </label>
         <label class="input-wrapper">
           <p> E-mail</p>
           <div class="input-wrapper__inputs">
-            <input type="text" name="name" placeholder="Введите ваш e-mail" required>
+            <div class="error-wrapper">
+              <input type="text" name="name" placeholder="Введите ваш e-mail" required>
+              <div class="error-text"><small>*Неправильное имя</small></div>
+            </div>
           </div>
         </label>
         <label class="input-wrapper">
           <p> Комментарий</p>
           <div class="input-wrapper__inputs">
-            <textarea placeholder="Введите текст сообщения" name="message" rows="4" required></textarea>
+            <div class="error-wrapper">
+              <textarea placeholder="Введите текст сообщения" name="message" rows="4" required></textarea>
+              <div class="error-text"><small>*Неправильное имя</small></div>
+            </div>
           </div>
         </label>
         <div class="descripton"><small>Нажимаю на кнопку, вы даете согласие на<a href="policy">обработку персональных данных</a></small></div>

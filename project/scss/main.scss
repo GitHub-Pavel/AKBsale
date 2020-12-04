@@ -179,17 +179,24 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
 
     @include sm(padding-top, 10px);
 
-    input, button {
+    input {
+      padding-top: 14px;
+      padding-bottom: 15px;
+    }
+
+    .error-wrapper, button {
       margin: 20px 10px 0;
     }
 
-    input {
+    .error-wrapper {
       flex: 1 1 300px;
 
-      @include sm(flex, auto);
+      @include sm(flex, none);
+      @include sm(width, calc(100% - 20px));
 
       &:first-child {
         @include sm(order, 0);

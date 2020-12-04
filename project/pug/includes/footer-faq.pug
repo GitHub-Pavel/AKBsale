@@ -4,7 +4,13 @@ section#faq-phone.faq-phone.section
         h2.text-center +7 (812) 318-45-63
         p.text-center.faq-phone__description Или укажите свой номер, мы с удовольствием перезвоним
         form.faq-phone__form
-            input(type="text" name="name" placeholder="Ваше имя" required)
-            input(type="tel" name="tel" placeholder="Ваш телефон" required)
-            button.btn.btn-primary.btn-black(type="submit") Отправить
+            .error-wrapper
+                input(type="text" name="name" placeholder="Ваше имя" required).error
+                .error-text
+                    small *Неправильное имя
+            .error-wrapper
+                input(type="tel" name="tel" placeholder="Ваш телефон" required)
+                .error-text
+                    small *Неправильное имя
+            button.btn.btn-small.btn-black(type="submit") Отправить
             p.atention *Нажимая на кнопку вы даете согласие на обработку своих персональных данных

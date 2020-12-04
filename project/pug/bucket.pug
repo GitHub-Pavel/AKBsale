@@ -82,11 +82,17 @@ block content
                     label.input-wrapper
                         p Получатель*
                         .input-wrapper__inputs
-                            input(type="text" name="name" placeholder="Получатель*" required)
+                            .error-wrapper
+                                input(type="text" name="name" placeholder="Получатель*" required).error
+                                .error-text
+                                    small *Неправильное имя
                     label.input-wrapper
                         p Телефон*
                         .input-wrapper__inputs
-                            input(type="tel" name="tel" placeholder="Телефон*" required)
+                            .error-wrapper
+                                input(type="tel" name="tel" placeholder="Телефон*" required)
+                                .error-text
+                                    small *Неправильное имя
                     label.input-wrapper
                         p Комментарий
                         .input-wrapper__inputs
@@ -109,15 +115,15 @@ block content
                 .basket-form__triple
                     h3 Варианты доставки:
                     label.radio-wrapper
-                        input(type="radio" name="payment" value="pickup" required)
-                        .box
-                        p Самовывоз м. Первомайская, 7-я Парковая 24А
+                            input(type="radio" name="payment" value="pickup" required).error
+                            .box
+                            p Самовывоз м. Первомайская, 7-я Парковая 24А
                     label.radio-wrapper
-                        input(type="radio" name="payment" value="moscow" required)
+                        input(type="radio" name="payment" value="moscow" required).error
                         .box
                         p Доставка по Москве и МО
                     label.radio-wrapper
-                        input(type="radio" name="payment" value="tk_rf" required)
+                        input(type="radio" name="payment" value="tk_rf" required).error
                         .box
                         p Отправка ТК по РФ
                 .basket-form__triple

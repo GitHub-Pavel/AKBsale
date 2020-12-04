@@ -69,11 +69,17 @@ footer.footer#footer
         label.input-wrapper
             p  Имя
             .input-wrapper__inputs
-                input(type="text" name="name" placeholder="Введите ваше имя" required)
+                .error-wrapper
+                    input(type="text" name="name" placeholder="Введите ваше имя" required).error
+                    .error-text
+                        small *Неправильное имя
         label.input-wrapper
             p  Телефон
             .input-wrapper__inputs
-                input(type="tel" name="tel" placeholder="Введите ваш телефон" required)
+                .error-wrapper
+                    input(type="tel" name="tel" placeholder="Введите ваш телефон" required)
+                    .error-text
+                        small *Неправильное имя
         .descripton
             small Нажимаю на кнопку, вы даете согласие на
                 a(href="policy") обработку персональных данных
@@ -87,19 +93,31 @@ footer.footer#footer
         label.input-wrapper
             p  Имя
             .input-wrapper__inputs
-                input(type="text" name="name" placeholder="Введите ваше имя" required)
+                .error-wrapper
+                    input(type="text" name="name" placeholder="Введите ваше имя" required).error
+                    .error-text
+                        small *Неправильное имя
         label.input-wrapper
             p  Телефон
             .input-wrapper__inputs
-                input(type="tel" name="tel" placeholder="Введите ваш телефон" required)
+                .error-wrapper
+                    input(type="tel" name="tel" placeholder="Введите ваш телефон" required)
+                    .error-text
+                        small *Неправильное имя
         label.input-wrapper
             p  Ссылка на товар
             .input-wrapper__inputs
-                input(type="text" name="link_to_product" placeholder="Введите ссылку на товар" required)
+                .error-wrapper
+                    input(type="text" name="link_to_product" placeholder="Введите ссылку на товар" required)
+                    .error-text
+                        small *Неправильное имя
         label.input-wrapper
             p  Комментарий
             .input-wrapper__inputs
-                textarea(placeholder="Введите текст сообщения" name="message" rows="4")
+                .error-wrapper
+                    textarea(placeholder="Введите текст сообщения" name="message" rows="4")
+                    .error-text
+                        small *Неправильное имя
         .descripton
             small Нажимаю на кнопку, вы даете согласие на
                 a(href="policy") обработку персональных данных
@@ -112,15 +130,24 @@ footer.footer#footer
         label.input-wrapper
             p  Имя
             .input-wrapper__inputs
-                input(type="text" name="name" placeholder="Введите ваше имя" required)
+                .error-wrapper
+                    input(type="text" name="name" placeholder="Введите ваше имя" required).error
+                    .error-text
+                        small *Неправильное имя
         label.input-wrapper
             p  E-mail
             .input-wrapper__inputs
-                input(type="text" name="name" placeholder="Введите ваш e-mail" required)
+                .error-wrapper
+                    input(type="text" name="name" placeholder="Введите ваш e-mail" required)
+                    .error-text
+                        small *Неправильное имя
         label.input-wrapper
             p  Комментарий
             .input-wrapper__inputs
-                textarea(placeholder="Введите текст сообщения" name="message" rows="4" required)
+                .error-wrapper
+                    textarea(placeholder="Введите текст сообщения" name="message" rows="4" required)
+                    .error-text
+                        small *Неправильное имя
         .descripton
             small Нажимаю на кнопку, вы даете согласие на
                 a(href="policy") обработку персональных данных
